@@ -1,0 +1,51 @@
+.container{
+    width: 100%;
+    height: auto;
+    background-color: rgba(40, 40, 40, 1);
+    color: white;
+    padding-bottom: 10px;
+}
+.regis{
+    display: flex;
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-content{
+    width: 60%;
+    position: relative;
+    padding: 5% 0% 0% 11%;
+
+}
+.about-content h2{
+    font-size: 25px;
+    padding-top: 5px;
+
+}
+.link-content h2{ 
+    position: relative;
+    font-weight: 700;
+    margin-bottom: 15px;
+    
+}
+.link-content h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f00;
+}
+.link-content{
+    padding-left: 80px;
+    padding-top: 60px;
+}
+.link-content ul li{
+
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: larger;
+
+}
