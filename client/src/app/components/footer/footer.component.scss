@@ -10,9 +10,7 @@
     display: flex;
     position: relative;
 }
-i{
-    margin-left: 30px;
-}
+
 .regis{
     display: flex;
 }
@@ -87,7 +85,7 @@ i{
     .container i{
         margin-left: 50px;
         position: relative;
-        font-size: 50px;
+        font-size: 35px;
         margin-bottom: 15px;
         
     }
@@ -95,14 +93,16 @@ i{
         display: none;
     }
     .about-content{
-        width: 70%;
+        width: 100%;
     }
     .about-content h2{
-        font-size: 20px;
+        font-size: 14px;
+        margin-left: 50px;
     }
     .vl{
         display: none;
     }
+    
 }
 
   
