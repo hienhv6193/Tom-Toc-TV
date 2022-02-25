@@ -4,6 +4,14 @@
     background-color: rgba(40, 40, 40, 1);
     color: white;
     padding-bottom: 10px;
+    
+}
+#icon{
+    display: flex;
+    position: relative;
+}
+i{
+    margin-left: 30px;
 }
 .regis{
     display: flex;
@@ -15,7 +23,7 @@
 .about-content{
     width: 60%;
     position: relative;
-    padding: 5% 0% 0% 11%;
+    padding: 5% 0% 0% 7%;
 
 }
 .about-content h2{
@@ -41,6 +49,7 @@
 .link-content{
     padding-left: 80px;
     padding-top: 60px;
+   
 }
 .link-content ul li{
 
@@ -49,3 +58,51 @@
     font-size: larger;
 
 }
+.vl{
+    border-left: solid white;
+    height: 200px;
+    margin-left: 5%;
+    margin-top: 50px;
+}
+.link-content  li:hover{
+    color: rgba(64, 64, 238, 0.856);
+}
+.regis button:hover{
+    background-color: rgb(129, 5, 5);
+    color: yellow   ;
+}
+@media only screen and (max-width: 900px){
+    .container{
+        height: auto;
+    }
+    .link-content {
+        display: none;
+        margin-left: 5%;
+    }
+    .about-content{
+        font-size: medium;
+        margin-left: 15%;
+        
+    }
+    .container i{
+        margin-left: 50px;
+        position: relative;
+        font-size: 50px;
+        margin-bottom: 15px;
+        
+    }
+    .about-content p{
+        display: none;
+    }
+    .about-content{
+        width: 70%;
+    }
+    .about-content h2{
+        font-size: 20px;
+    }
+    .vl{
+        display: none;
+    }
+}
+
+  
