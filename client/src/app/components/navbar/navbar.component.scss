@@ -3,7 +3,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0.5rem;
+	padding: 3px;
 	border-bottom: #010103;
 	position: fixed;
 	top: 0;
@@ -17,7 +17,7 @@
 }
 
 .contain .navbar {
-	padding: 0 30rem;
+	padding: 0 372px 0 187px;
 	font-size: 30px;
 	text-transform: uppercase;
 	display: flex;
@@ -85,6 +85,26 @@
 
 .contain .user  i:hover {
 	color: #cc0000;
+}
+
+.contain .login {
+	display: flex;
+	margin-right: 50px;
+}
+
+button {
+	height: 38px;
+	width: 136px;
+	font-size: 20px;
+	margin-right: 18px;
+	border-radius: 1.5rem;
+	color: #fff;
+	background-color: red;
+}
+
+.contain .divine {
+	margin: 0 17px 5px 5px;
+	border: 1px solid #fff;
 }
 	
 
