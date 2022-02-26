@@ -1,48 +1,69 @@
 .full{
-    width: 100%;
-    height: 60%;
+    width: auto;
+    height: 45%;
     background-image: url("../../../assets/images/1.png");
     background-size: cover;
     position: relative;
+    padding: 2% 18% 2% 18%;
 }
 .main{
     width: 100%;
-    height: 55%;
+    height: 100%;
+    // background-color: green;
 }
 .left{
-    width:50%;
-    height: 160%;
-    background-color: #C4C4C4;
+    width:67%;
+    height: 100%;
+    background-color: red;
     float: left;
-    // background-image: url("../../../assets/images/video.png");
+    background-image: url("../../../assets/images/video.png");
     background-size: cover;
-    margin-top: 2%;
-    margin-left: 16.2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left>div{
+    width:9.4%;
+    height: 9.4%;
+    border-radius: 100%;
+    border: 0.4vh solid #fffcfc;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.left>div>i{
+    // margin-top: 17%; 
+    margin-left: 5%;
+    font-size: 1.5rem;
+}
+
+.left>div>i:hover{
+    color: #bae02e;
 }
 .right{
-    width:16%;
-    height: 160%;
+    width:30%;
+    height: 100%;
     float: right;
-    margin-right: 16%;
-    margin-top: 2%;
-}
-#nut{
-    margin-top: 21%;
-    margin-left: 49%;
-    border-radius: 300px;
-    background-color: dodgerblue;
-    border: none;
-    opacity: 0.6;
-    transition: 0.3s;
-}
-#nut:hover{
-    opacity: 1;
+    // margin-right: 16%;
+    // margin-top: 2%;
+    background-size: cover;
+    // background-color: blue;
 }
 .khung{
-    margin-bottom: 6%;
     width:100%;
-    height: 16%;
+    height: 17%;
+    margin-bottom: 3.3%;
+    // background-color: red;
 }
+.khung >img{
+    width:100%;
+    height: 100%;
+}
+
 
 
 .container{
@@ -53,11 +74,6 @@
     background-color: #000000;
 }
 
-// .titleBar{
-//     width: 100%;
-//     height: 7%;
-//     background-color: red;
-// }
 .info-title{
     width: 100%;
     height: auto;
@@ -117,29 +133,30 @@
 .list-game{
     width: 90%;
     height: 30%;
-    margin: 2% 0% 3% 5%;
-    background-color: red;
+    display: flex;
+    margin-left: 5%;
+    // background-color: red;
 }
 .list-game >img {
     width: 15%;
     height: 100%;
     //display: flex;
-    margin-right: 2%;
+    margin: 2% 2% 3% 0%;
     border-radius: 2.5%;
     // background-color: red;
 }
 .list-hot{
     width: 90%;
     height: 30%;
-    margin: 2% 0% 3% 5%;
+    margin-left: 5%;
     display: flex;
-    background-color: red;
+    // background-color: red;
 }
 .streamer {
     width: 15%;
     height: 100%;
     //display: flex;
-    margin-right: 2%;
+    margin: 2% 2% 3% 0%;
     border-radius: 2.5%;
     background-color: #80808081;
 }
@@ -179,10 +196,13 @@
     font-size: 65%;
     color: #ffffff;
 }
+.name-streamer:hover{
+    color: #17a53b;
+}
 .uesr-goup{
     width: 8%;
     height: 20%;
-    margin: 3% 4% 0% -1%;
+    margin: 3% 4% 5% -1%;
     float:  left;
     //display: flex;
 }
@@ -208,17 +228,17 @@
 }
 
 .list-pubg{
-    width: 100%;
-    height: auto;
-    margin: 2% 0% 3% 5%;
+    width: 90%;
+    height: 30%;
     display: flex;
-    background-color: red;
+    margin-left: 5%;
+    // background-color: red;
 }
 .streamer-pubg {
     width: 15%;
     height: 100%;
     //display: flex;
-    margin-right: 2%;
+    margin: 2% 2% 3% 0%;
     border-radius: 2.5%;
     background-color: #80808081;
 }
@@ -252,34 +272,55 @@
 .stream-title{
     width: 70%;
     // height: 8%;
-    margin: 2% 4% 0% -1%;
+    margin: 0% 4% 0% -1%;
     float:  left;
     font-weight: bold;
     font-size: 65%;
     color: #ffffff;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 .name-streamer-pubg{
-    width: 0%;
-    // height: 8%;
-    margin: 2% 4% 0% -1%;
+    width: 37%;
+    height: 8%;
+    margin: 4% 4% 4% -1%;
     float:  left;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
     font-weight: bold;
     font-size: 65%;
+    // background-color: #6C47FF;
     color: #ffffff;
 }
-.uesr-goup-pubg{
-    width: 8%;
+.stream-title:hover{
+    color: #17a53b;
+}
+.name-streamer-pubg:hover{
+    color: #17a53b;
+}
+.peo-folo{
+    width: 30%;
     height: 20%;
-    margin: 5% 20% 0% -1%;
+    // background-color: #e71616;
+    margin: 4% 3% 0% 0%;
     float:  right;
-    margin-left: 7%;
+}
+.uesr-goup-pubg{
+    width: 30%;
+    height: 40%;
+    margin: 5% 70% 0% -67%;
+    float:  right;
     //display: flex;
 }
 .uesr-watch-pubg{
-    width: 8%;
+    width: 11%;
     height: 22%;
     color: #ffffff;
-    margin: 9% -9% 0% 0%;
+    margin: 1% 12% 0% 0%;
+    font-size: 30%;
     float:  right;
-    font-size: 65%;
+    font-size: 90%;
 }
+
