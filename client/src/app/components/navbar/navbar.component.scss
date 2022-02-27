@@ -1,0 +1,112 @@
+.contain {
+	background: #010103;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 3px;
+	border-bottom: #010103;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+.contain .logo img {
+	width: auto;
+	height: 6rem;
+}
+
+.contain .navbar {
+	padding: 0 372px 0 187px;
+	font-size: 30px;
+	text-transform: uppercase;
+	display: flex;
+	color: red;
+	list-style-type: none;
+}
+
+.contain .navbar a{
+	display: flex;
+	padding: 0 3px;
+	text-decoration: none;
+	margin: 0 1rem;
+	font-size: 1.6rem;
+	color: #fff;
+}
+
+
+.contain .navbar a:hover {
+	color: #cc0000;
+	border-bottom: .1rem solid #cc0000;
+	padding-bottom: .5rem;
+}
+
+.contain .navbar .search-form {
+	float: right;
+	width: 35rem;
+	height: 1rem;
+	display: flex;
+	align-items: center;
+	transform-origin: top;
+}
+
+.contain .navbar .search-form.active {
+	transform: scaleY(1);
+}
+
+.contain .navbar .search-form input {
+	font-size: 1.6rem;
+	padding: 4px;
+	border-radius: .5rem;
+	background-color: white;
+}
+
+.contain .navbar .search-form label  {
+	color: white;
+	cursor: pointer;
+	height: 45px;
+	width: 45px;
+	font-size: 2.2rem;
+	margin-left: 10px;
+	padding-left: .2rem;
+}
+
+.contain .navbar .search-form label:hover {
+	color: #cc0000;
+}
+
+.contain .user  {
+	margin-right: 20px;
+	cursor: pointer;
+	font-size: 2.5rem;
+	margin-right: 1.5rem;
+	color: white;
+}
+
+.contain .user  i:hover {
+	color: #cc0000;
+}
+
+.contain .login {
+	display: flex;
+	margin-right: 50px;
+}
+
+button {
+	height: 38px;
+	width: 136px;
+	font-size: 20px;
+	margin-right: 18px;
+	border-radius: 1.5rem;
+	color: #fff;
+	background-color: red;
+}
+
+.contain .divine {
+	margin: 0 17px 5px 5px;
+	border: 1px solid #fff;
+}
+	
+
+
+
