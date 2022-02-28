@@ -12,9 +12,20 @@
 	z-index: 1000;
 }
 
+.contain .menu {
+	font-size: 30px;
+	margin: 0 auto;
+	padding: 0 0 0 30px;
+	height: 40px;
+	width: 40px;
+	color: #fff;
+}
+
 .contain .logo img {
-	width: auto;
-	height: 6rem;
+	padding-left: 50px;
+	width: 86px;
+	height: 60px;
+	
 }
 
 .contain .navbar {
@@ -114,3 +125,44 @@ button {
 	margin: 0 17px 5px 5px;
 	border: 1px solid #fff;
 }
+
+
+// a queries 
+
+@media only screen and (max-width: 900px){
+	.contain{
+	    font-size: 50%;
+	    width: auto;
+	    height: auto;
+	}
+	.navbar{
+	    margin-left: 5%;
+	}
+	.about-content{
+	    font-size: medium;
+	    margin-left: 15%;
+	    
+	}
+	.container i{
+	    margin-left: 50px;
+	    position: relative;
+	    font-size: 35px;
+	    margin-bottom: 15px;
+	    
+	}
+	.about-content p{
+	    display: none;
+	}
+	.about-content{
+	    width: 100%;
+	}
+	.about-content h2{
+	    font-size: 14px;
+	    margin-left: 50px;
+	}
+	.vl{
+	    display: none;
+	}
+	
+    }
+    
