@@ -1,16 +1,17 @@
 .contain {
-	background: #010103;
+	background-color: #13131a;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 3px;
-	border-bottom: #010103;
+	padding: 2px;
+	border-bottom: #13131a;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 1000;
 }
+
 .contain .logo img {
 	width: auto;
 	height: 6rem;
@@ -25,6 +26,7 @@
 	list-style-type: none;
 }
 
+
 .contain .navbar a{
 	display: flex;
 	padding: 0 3px;
@@ -34,12 +36,18 @@
 	color: #fff;
 }
 
+.contain .navbar #category {
+	display: inline-block;
+	position: relative;
+}
+
 
 .contain .navbar a:hover {
 	color: #cc0000;
 	border-bottom: .1rem solid #cc0000;
 	padding-bottom: .5rem;
 }
+
 
 .contain .navbar .search-form {
 	float: right;
@@ -106,7 +114,3 @@ button {
 	margin: 0 17px 5px 5px;
 	border: 1px solid #fff;
 }
-	
-
-
-
