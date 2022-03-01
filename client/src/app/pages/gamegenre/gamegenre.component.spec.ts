@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MobaComponent } from './moba.component';
+import { GamegenreComponent } from './gamegenre.component';
 
-describe('MobaComponent', () => {
-  let component: MobaComponent;
-  let fixture: ComponentFixture<MobaComponent>;
+describe('GamegenreComponent', () => {
+  let component: GamegenreComponent;
+  let fixture: ComponentFixture<GamegenreComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MobaComponent ]
+      declarations: [ GamegenreComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MobaComponent);
+    fixture = TestBed.createComponent(GamegenreComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
