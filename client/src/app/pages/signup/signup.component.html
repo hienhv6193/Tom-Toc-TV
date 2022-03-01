@@ -1,0 +1,56 @@
+<div class="center">
+    <div class="container">
+        <div class="logo" style="display: flex;justify-content: space-between;">
+            <div style="display: flex; position: relative;">
+                <img src="../../../assets/images/Logo.png" style="width: fit-content;">
+            </div>
+            <i [routerLink]="['/login']" class="fa fa-chevron-left fa-2x" aria-hidden="true" style="cursor: pointer;"></i>
+        </div>
+        <hr>
+        <h3 style="padding-left: 10px;"> Đăng Ký</h3>
+        <div class="formLogin">
+            <form action="http://localhost:4200/login">
+                <div class="biggerData">
+                    <div class="data">
+                        <label>Tài khoản</label>
+                        <input  type="text" required placeholder="Email/SĐT">
+                    </div>
+                    <div class="data">
+                        <label>Mật khẩu</label>
+                        <input matInput type="password" required placeholder="Nhập mật khảu">
+                        <label style="font-size: 10px;margin-left: 2px;display: inline-block;">Mật khẩu nên là sự kết hợp của 6-20 ký tự và số</label>
+                        
+                    </div>
+                    <div class="data">
+                        <label>Xác Nhận Mật khẩu</label>
+                        <input matInput type="password" required placeholder="Xác nhận">
+                    </div>
+                   
+                    <div class="loginBtn" style="margin-top: 20px;">
+                        <div class="inner"></div>
+                        <button> Đăng Ký</button>
+                    </div>
+                </div>
+            </form>
+            <div class="vl"></div>
+            <div class="otherLogin" style="justify-content: center;">
+                <h2>Đăng nhập bằng bên thứ 3</h2>
+                <div id="customBtn" class="customGPlusSignIn">
+                    <span class="icon"></span>
+                    <span class="buttonText">Đăng nhập bằng Google</span>
+                </div>
+                <div id="customBtn2" class="customGPlusSignIn">
+                    <span class="icon2"></span>
+                    <span class="buttonText">Đăng nhập với FaceBook</span>
+                </div>
+                <div class="term" >
+                    <input type="checkbox">
+                     Đồng ý với  <a href="#" style=" color: rgba(173, 156, 208, 1);"> thoả thuận người
+                        dùng  </a>  và  <a href="#" style=" color: rgba(173, 156, 208, 1);" > chính sách quyền riêng tư </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
