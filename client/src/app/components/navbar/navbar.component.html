@@ -1,6 +1,6 @@
 <div class="contain">
 	<a href="#" class="logo">
-		<img src="./../../../assets/images/Logo.png" alt="">
+		<img src="./../../../assets/images/Logo.png" >
 	</a>
 
 	<div class="navbar">
@@ -27,9 +27,9 @@
 	
 	<!--icon chưa đăng nhập -->
 	<div class="login">
-		<button mat-button>Sign in</button>
+		<button [routerLink]="['/login']"  mat-button>Sign in</button>
 		<div class="divine"></div>
-		<button mat-button>Sign out</button>
+		<button  [routerLink]="['/signup']" mat-button>Sign out</button>
 	</div>
 
 
