@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [{ path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) }, { path: 'signup', loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignupModule) }, { path: 'forgetPass', loadChildren: () => import('./pages/forget-pass/forget-pass.module').then(m => m.ForgetPassModule) }];
+
+const routes: Routes = [{ path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) }, { path: 'signup', loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignupModule) }, { path: 'forgetPass', loadChildren: () => import('./pages/forget-pass/forget-pass.module').then(m => m.ForgetPassModule) },{ path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) }];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

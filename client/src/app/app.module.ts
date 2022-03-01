@@ -10,15 +10,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
-import { HomeComponent } from './components/home/home.component';
+import { InfHomeComponent } from './components/inf-home/inf-home.component';
+import { SharedModule } from './shared/shared.module';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
   declarations: [
-    NavbarComponent,
     AppComponent,
-    FooterComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +27,8 @@ import { HomeComponent } from './components/home/home.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
