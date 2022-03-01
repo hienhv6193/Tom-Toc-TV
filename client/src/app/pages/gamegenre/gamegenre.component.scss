@@ -3,12 +3,18 @@
     height: auto;
     background-color: #000000;
 }
+.total{
+    width: 100%;
+    height: auto;
+}
 #icon{
-    width: 3%;
+    width: 5%;
     height: 5%;
-    margin-top: 1.5%;
+    margin-top: 10%;
     margin-left: 5%;
     background-color: black;
+    color: #FFFFFF;
+    border: 5px;
 }
 #button{
     font-size: 20px;
@@ -21,20 +27,25 @@
     border: solid 3px;
 }
 #button:hover{
-    box-shadow: 5px 5px 10px #2AABEE;
+    background-color: #2AABEE;
+    border-style: solid;
+    border-width: 2px;
+    opacity: 3;
+    transition: all .3s;
 }
 .type1{
     width: 300px;
     height: auto;
     margin-left: 4%;
-    margin-bottom: 5%;
+    margin-bottom: 50px;
     border: solid 3px;
     display: flex;
     flex-direction: column;
     background-color: #80808081;
 }
 .type1:hover{
-    box-shadow: 5px 5px 35px #2AABEE;
+    background-color: #2AABEE;
+    border-style: solid;
 }
 #stream1 {
     margin-top: 8%;
@@ -56,6 +67,8 @@ h2{
     color: #FFFFFF;
 }
 #fullalltype{ 
+    width: 100%;
+    height: auto;
     margin-top: 1.5%;
     margin-left: 1%;
     display: flex;

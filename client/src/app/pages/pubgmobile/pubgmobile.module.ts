@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PubgmobileRoutingModule } from './pubgmobile-routing.module';
 import { PubgmobileComponent } from './pubgmobile.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { PubgmobileComponent } from './pubgmobile.component';
   ],
   imports: [
     CommonModule,
-    PubgmobileRoutingModule
+    PubgmobileRoutingModule,
+    SharedModule
   ]
 })
 export class PubgmobileModule { }

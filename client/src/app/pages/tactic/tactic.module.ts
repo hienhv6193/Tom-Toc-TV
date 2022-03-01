@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TacticRoutingModule } from './tactic-routing.module';
 import { TacticComponent } from './tactic.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { TacticComponent } from './tactic.component';
   ],
   imports: [
     CommonModule,
-    TacticRoutingModule
+    TacticRoutingModule,
+    SharedModule
   ]
 })
 export class TacticModule { }
