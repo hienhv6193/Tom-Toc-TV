@@ -1,5 +1,5 @@
 .contain {
-	background-color: #13131a;
+	background-color: #373737;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -22,7 +22,7 @@
 }
 
 .contain .logo img {
-	padding-left: 50px;
+	padding-left: 18px;
 	width: 86px;
 	height: 60px;
 	
@@ -129,40 +129,26 @@ button {
 
 // a queries 
 
-@media only screen and (max-width: 900px){
-	.contain{
-	    font-size: 50%;
-	    width: auto;
-	    height: auto;
+@media only screen and (max-width: 991px){
+	.contain {
+		width: 100%;
+		height: auto;
 	}
-	.navbar{
-	    margin-left: 5%;
-	}
-	.about-content{
-	    font-size: medium;
-	    margin-left: 15%;
-	    
-	}
-	.container i{
-	    margin-left: 50px;
-	    position: relative;
-	    font-size: 35px;
-	    margin-bottom: 15px;
-	    
-	}
-	.about-content p{
-	    display: none;
-	}
-	.about-content{
-	    width: 100%;
-	}
-	.about-content h2{
-	    font-size: 14px;
-	    margin-left: 50px;
-	}
-	.vl{
-	    display: none;
+
+	.contain .navbar {
+		width: 5%;
+		font-size: 20px;
+		float: left;
 	}
 	
-    }
-    
+	.contain .search-form {
+		float: left;
+		width: 50%;
+	}
+}
+	
+	
+
+@media screen and (max-width:768px) {
+	
+}
