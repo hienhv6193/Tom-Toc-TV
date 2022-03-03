@@ -9,7 +9,6 @@ import { SidebarComponent } from '../components/sidebar/sidebar.component';
   declarations: [
   FooterComponent,
   InfHomeComponent,
-  NavbarComponent,
   SidebarComponent,
 ],
   imports: [
@@ -19,7 +18,6 @@ import { SidebarComponent } from '../components/sidebar/sidebar.component';
   exports: [
     FooterComponent,
     InfHomeComponent,
-    NavbarComponent,
     MatFormFieldModule,
     SidebarComponent,
   ]

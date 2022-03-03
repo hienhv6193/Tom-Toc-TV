@@ -14,10 +14,10 @@ import { InfHomeComponent } from './components/inf-home/inf-home.component';
 import { SharedModule } from './shared/shared.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +29,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     MatButtonModule,
     MatInputModule,
     SharedModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
