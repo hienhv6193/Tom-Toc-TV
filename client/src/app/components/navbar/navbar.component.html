@@ -1,15 +1,21 @@
 <div class="contain">
+	
+	<div class="menu">
+		<i class="fa fa-bars"></i>
+	</div>
+
 	<a href="#" class="logo">
 		<img src="./../../../assets/images/Logo.png" >
 	</a>
 
 	<div class="navbar">
-		<a routerLink="/home">home</a>
-		<a routerLink="/Live">Live</a>
-		<a routerLink="/category">
-			category
-		<span class="fa fa-arrow-circle-down"></span>
+		<a [routerLink]="['/home']">home</a>
+		<a [routerLink]="['/gamegenre']">Live</a>
+		<a routerLink="/Category">Category
+			<i class="fa fa-arrow-circle-down"></i>
+			
 		</a>
+		
 		
 		<a routerLink="/recharge">
 			recharge
@@ -20,12 +26,18 @@
 			<label class='fa fa-search'></label>
 		</div>
 	</div>
+	<div class="login">
+		<button mat-button [routerLink]="['/login']" >Sign in</button>
+		<div class="divine"></div>
+		<button mat-button  [routerLink]="['/signup']" >Sign up</button>
+	</div>
 	<!-- Phần icon đăng nhập -->
 	<!-- <div class="user">
 		<i  class='fa fa-user-o '></i>
 	</div> -->
 	
 	<!--icon chưa đăng nhập -->
+
 	<div class="login">
 			<button mat-button [routerLink]="['/login']" >Sign in</button>
 			<div class="divine"></div>

@@ -4,27 +4,30 @@
             <div style="display: flex; position: relative;">
                 <img src="../../../assets/images/Logo.png" style="width: fit-content;">
             </div>
-            <i [routerLink]="['/login']" class="fa fa-chevron-left fa-2x" aria-hidden="true" style="cursor: pointer;"></i>
+            <i [routerLink]="['/login']" class="fa fa-arrow-left fa-2x" aria-hidden="true" style="cursor: pointer;"></i>
         </div>
         <hr>
-        <h3 style="padding-left: 10px;">Quên Mật Khẩu</h3>
+        <h2 style="padding-left: 10px;">Quên Mật Khẩu</h2>
         <div class="formLogin">
-            <form action="#">
+            <form action="http://localhost:4200/login">
                 <div class="biggerData">
                    
-                    <div class="data">
-                        <label>Mật khẩu</label>
-                        <input matInput type="password" required placeholder="Nhập mật khảu">
-                        
-                        
+                    <div class="data" style="margin-top: 30%;">
+                        <div>
+                            <i class="fa fa-eye "  aria-hidden="true" style="cursor: pointer; padding-top: 8%;margin-left: 110%;"></i>
+                            <input matInput type="password" required placeholder="Nhập mật khẩu mới">
+                            </div>
+                            
+                            
                     </div>
                     <div class="data">
-                        <label>Xác Nhận Mật khẩu</label>
-                        <input matInput type="password" required placeholder="Xác nhận">
+                        <div>
+                            <i class="fa fa-eye " aria-hidden="true" style="cursor: pointer; padding-top: 8%;margin-left: 110%;"></i>
+                            <input matInput type="password" required placeholder="Xác nhận mật khẩu" >
+                            </div>
                     </div>
                     <div class="data">
-                        <label>Email Xác Thực</label>
-                        <input  type="text" required placeholder="Email/SĐT">
+                        <input  type="text" required placeholder="Email xác thực">
                     </div>
                    
                     <div class="loginBtn" style="margin-top: 20px;">
@@ -36,7 +39,7 @@
             <div class="vl"></div>
             <div class="otherLogin" style="justify-content: center;">
                 <h2>Đăng nhập bằng bên thứ 3</h2>
-                <div id="customBtn" class="customGPlusSignIn">
+                <div id="customBtn" class="customGPlusSignIn" style="margin-top: 5%;">
                     <span class="icon"></span>
                     <span class="buttonText">Đăng nhập bằng Google</span>
                 </div>
