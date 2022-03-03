@@ -6,49 +6,122 @@
 }
 .backround2{
     width:100% ;
-    height:60% ;
-    background-color: rgb(105, 102, 102);
+    height:40% ;
+    background-color:red;
+}
+.flex1{
+    background-color: rgb(99, 95, 95);
+    height: fit-content;
+    width: 100%;
+    margin-top: 10%;
     display: flex;
 }
+#avatar{
+    width:10% ;
+    height:auto ;
+}
+#title{
+    width:40% ;
+    height:auto ;
+    font-size: large;
+}
+.flex2{
+    background-color: bisque;
+    height: 70%;
+    width: 100%;
+}
+.flex3{
+    background-color: rgb(34, 114, 51);
+    height: 15%;
+    width: 100%;
+}
 img{
-    width: 5%;
-    height: 10%;
-    margin-bottom:4%;
-    margin-left:2% ;
-    margin-top: 1%;
-    
- 
+    // width: 10%;
+    // height: 20%;
+    // margin-bottom:8%;
+    // margin-left:2% ;
+    // margin-top: 1%; 
+    width: 60%;
+    height: 85%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    margin-left: 30%;
+    border: 5px;
 }
 p{
-    font-size: 120%;
+    font-size: 150%;
     color:white ;
-    margin-right: 20%;
-    margin-top: 2%;
-    margin-left: 2%;
+    // margin-right: 20%;
+     margin-top: 6%;
+    margin-left: 5%; }
+// .title{
+//     margin-bottom: 5%;
+//     margin-left: 5px;
+//     width: 30%;
+//     padding-right: 1%;
+// }
+#SumLike{
+    // background-color: aqua;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // text-align: center;
+    float:right;
 }
-.title{
-    margin-bottom: 5%;
-    margin-left: 5px;
-    width: 30%;
-    padding-right: 1%;
+#Like{
+    font-size: 200%;
+    width:50%;
+    height: 60%;
+    // margin-right:30%;
+    margin-top: 1%;
+//     background-color: red
 }
-.button{
+#Like i{
+    font-size: 30px;
+    color: white ;
+}
+#Like h2{
+    
+    color: white;
+}
+#DisLike{
+    margin-left: 50%;
     font-size: 180%;
-    margin-left: 30%;
-    margin-top: 2%;
+    margin-top: 1%;
+    font-size: 200%;
+    width: 50%;
+    height: 60%;
+
+    
 }
-.button2{
-    margin-left: 5%;
-   font-size: 180%;
-    margin-top: 2%;
+#DisLike i{
+    font-size: 30px;
+    color:white;
 }
-.Follow{
-    margin-left: 5%;
-    font-size: 100%;
-    width: 30%;
+#DisLike h2{
+    color: white;
 }
-.Share{
+#Sub{
     font-size:200% ;
     margin-top:1%;
-    margin-right:2%;
+    width: 40%;
 }
+  
+#Sub{
+    background-color: red;
+}
+// .Follow{
+//     margin-left: 5%;
+//     font-size: 100%;
+//     width: 30%;
+// }
+// .Share{
+//     font-size:200% ;
+//     margin-top:1%;
+//     margin-right:2%;
+// }
+// .video{
+//     padding-top: 10%;
+//     margin-right: 50%;
+// }
