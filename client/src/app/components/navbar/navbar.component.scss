@@ -13,24 +13,18 @@
 }
 
 .contain .menu {
-	font-size: 30px;
-	margin: 0 auto;
-	padding: 0 0 0 30px;
-	height: 40px;
-	width: 40px;
+	font-size: 25px;
+	margin: 0 3%;
 	color: #fff;
 }
 
-.contain .logo img {
-	padding-left: 18px;
-	width: 86px;
-	height: 60px;
-	
+.contain img {
+	height: 4rem;
 }
+	
 
 .contain .navbar {
-	padding: 0 372px 0 187px;
-	font-size: 30px;
+	padding: 0 5%;
 	text-transform: uppercase;
 	display: flex;
 	color: red;
@@ -47,7 +41,7 @@
 	color: #fff;
 }
 
-.contain .navbar #category {
+.contain .navbar .category {
 	display: inline-block;
 	position: relative;
 }
@@ -62,7 +56,7 @@
 
 .contain .navbar .search-form {
 	float: right;
-	width: 35rem;
+	width: 35%;
 	height: 1rem;
 	display: flex;
 	align-items: center;
@@ -75,15 +69,16 @@
 
 .contain .navbar .search-form input {
 	font-size: 1.6rem;
-	padding: 4px;
-	border-radius: .5rem;
+	padding: 0 2%;
+	border-radius: 1.5rem;
 	background-color: white;
 }
+
 
 .contain .navbar .search-form label  {
 	color: white;
 	cursor: pointer;
-	height: 45px;
+	height: 35px;
 	width: 45px;
 	font-size: 2.2rem;
 	margin-left: 10px;
@@ -107,8 +102,9 @@
 }
 
 .contain .login {
+	max-width: 100%;
 	display: flex;
-	margin-right: 50px;
+	margin-right: 3%;
 }
 
 button {
@@ -129,26 +125,18 @@ button {
 
 // a queries 
 
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 990px){
 	.contain {
-		width: 100%;
 		height: auto;
 	}
 
 	.contain .navbar {
-		width: 5%;
-		font-size: 20px;
-		float: left;
-	}
-	
-	.contain .search-form {
-		float: left;
-		width: 50%;
+		margin-left: 5%;
 	}
 }
 	
 	
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:600px) {
 	
 }
