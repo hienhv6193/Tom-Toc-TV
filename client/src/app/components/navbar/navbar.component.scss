@@ -56,7 +56,7 @@
 
 .contain .navbar .search-form {
 	float: right;
-	width: 35rem;
+	width: 35%;
 	height: 1rem;
 	display: flex;
 	align-items: center;
@@ -102,6 +102,7 @@
 }
 
 .contain .login {
+	max-width: 100%;
 	display: flex;
 	margin-right: 3%;
 }

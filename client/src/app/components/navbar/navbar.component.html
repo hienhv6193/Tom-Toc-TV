@@ -9,8 +9,8 @@
 
 
 	<div class="navbar">
-		<a routerLink="/home">home</a>
-		<a routerLink="/Live">Live</a>
+		<a [routerLink]="['/home']">home</a>
+		<a [routerLink]="['/gamegenre']">Live</a>
 		<a routerLink="/Category">Category
 			<i class="fa fa-arrow-circle-down"></i>
 		</a>
@@ -23,7 +23,8 @@
 
 			
 	</div>
-		
+	
+	<!--icon chưa đăng nhập -->
 	<div class="login">
 		<button mat-button [routerLink]="['/login']" >Sign in</button>
 		<div class="divine"></div>
@@ -36,7 +37,7 @@
 		<i  class='fa fa-user-o '></i>
 	</div> -->
 	
-	<!--icon chưa đăng nhập -->
+	
 </div>
 
 

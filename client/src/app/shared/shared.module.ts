@@ -14,6 +14,7 @@ import { SidebarComponent } from '../components/sidebar/sidebar.component';
   FooterComponent,
   InfHomeComponent,
   SidebarComponent,
+
 ],
   imports: [
     CommonModule,
