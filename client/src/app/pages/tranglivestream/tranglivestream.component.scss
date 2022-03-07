@@ -111,14 +111,21 @@ p{
     height: 10%;
     border-radius: 15px;
     width: 22%;
+    outline: auto;
+    outline-style: round;
 }
 
+.subcribe:hover {
+    cursor: pointer;
+
+}
 .subcribe h1 {
     color: white;
     margin: 0 auto;
     font-size: 20px;
     text-align: center;
 }
+
 
 #text-follow {
     margin-left: 5%;
