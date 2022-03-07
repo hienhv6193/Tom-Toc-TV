@@ -133,7 +133,7 @@ form .loginBtn button{
     margin-left: 20%;
   }
 .otherLogin{
-    margin-left: 10%;
+    margin-left: 5%;
     position: relative
 }
 .otherLogin h2{
@@ -157,13 +157,13 @@ form .loginBtn button{
     vertical-align: middle;
     padding-left: 20px;
     padding-right: 10px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 }
 #customBtn {
     display: inline-block;
     color: black;
-    width: 80%;
+    width: 90%;
     border-radius: 26px;
     border: solid 1px white;
     position: relative;
@@ -176,7 +176,7 @@ span.icon2{
     background-image: url(../../../assets/images/facebook.png) ;
     display: inline-block;
     vertical-align: middle;
-    padding-left: 1px;
+    // padding-left: 1px;
     width: 50px;
     height: 50px;
     background-size: cover;
@@ -186,7 +186,7 @@ span.icon2{
     margin-top: 20px;
     display: inline-block;
     color: #fff;
-    width: 80%;
+    width: 90%;
     border-radius: 26px;
     border: solid 1px white;
     background-color: rgb(31, 68, 156);
