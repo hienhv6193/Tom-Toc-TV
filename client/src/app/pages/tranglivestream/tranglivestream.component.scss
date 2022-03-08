@@ -5,50 +5,144 @@
     padding: 8% 0 0 0;
 }
 .backround2{
+    position: relative;
     width:100% ;
-    height:60% ;
-    background-color: rgb(105, 102, 102);
+    height:40% ;
+    background-color:red;
+}
+.flex1{
+    background-color: rgb(99, 95, 95);
+    height: fit-content;
+    width: 100%;
+    margin-top: 10%;
     display: flex;
 }
+
+#avatar{
+    width:10% ;
+    height:auto ;
+}
+#title{
+    width:36% ;
+    height:auto ;
+    font-size: large;
+}
+.flex2{
+    background-color: bisque;
+    height: 70%;
+    width: 100%;
+}
+.flex3{
+    background-color: rgb(34, 114, 51);
+    height: 15%;
+    width: 100%;
+}
 img{
-    width: 5%;
-    height: 10%;
-    margin-bottom:4%;
-    margin-left:2% ;
-    margin-top: 1%;
-    
- 
+    // width: 10%;
+    // height: 20%;
+    // margin-bottom:8%;
+    // margin-left:2% ;
+    // margin-top: 1%; 
+    width: 60%;
+    height: 85%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    margin-left: 30%;
+    border: 5px;
 }
 p{
-    font-size: 120%;
+    font-size: 150%;
     color:white ;
-    margin-right: 20%;
-    margin-top: 2%;
-    margin-left: 2%;
+    // margin-right: 20%;
+     margin-top: 6%;
+    margin-left: 5%; }
+// .title{
+//     margin-bottom: 5%;
+//     margin-left: 5px;
+//     width: 30%;
+//     padding-right: 1%;
+// }
+.SumLike{
+    margin-right: 5%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.title{
-    margin-bottom: 5%;
-    margin-left: 5px;
-    width: 30%;
-    padding-right: 1%;
+
+.SumLike #Like{
+    margin-top: 1%;
+    font-size: 200%;
+    width: 50%;
+    height: 60%;
 }
-.button{
-    font-size: 180%;
-    margin-left: 30%;
-    margin-top: 2%;
+.SumLike #Like i{
+    font-size: 38px;
+    color: white ;
 }
-.button2{
-    margin-left: 5%;
-   font-size: 180%;
-    margin-top: 2%;
+.SumLike #Like h2{
+    
+    color: white;
 }
-.Follow{
-    margin-left: 5%;
-    font-size: 100%;
-    width: 30%;
+.SumLike #DisLike{
+    margin-top: 1%;
+    font-size: 200%;
+    width: 50%;
+    height: 60%;
 }
-.Share{
+
+    
+#DisLike i{
+    font-size: 38px;
+    color:white;
+}
+#DisLike h2{
+    color: white;
+}
+#Sub{
     font-size:200% ;
     margin-top:1%;
-    margin-right:2%;
+    width: 40%;
 }
+
+.subcribe {
+    background-color: #4B11A9;
+    margin: 1% 4%;
+    height: 10%;
+    border-radius: 15px;
+    width: 22%;
+    outline: auto;
+    outline-style: round;
+}
+
+.subcribe:hover {
+    cursor: pointer;
+
+}
+.subcribe h1 {
+    color: white;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+#text-follow {
+    margin-left: 5%;
+    color: white;
+}
+
+// .Follow{
+//     margin-left: 5%;
+//     font-size: 100%;
+//     width: 30%;
+// }
+// .Share{
+//     font-size:200% ;
+//     margin-top:1%;
+//     margin-right:2%;
+// }
+// .video{
+//     padding-top: 10%;
+//     margin-right: 50%;
+// }
