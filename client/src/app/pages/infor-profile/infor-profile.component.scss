@@ -1,0 +1,71 @@
+.container{
+    height: 100%;
+    width: 100%;
+    background: #C4C4C4;
+}
+.container .sidebar{
+    float: left;
+    height: 100%;
+    width: 23%;
+    background: #b90b0b;
+}
+ app-sibabar-profile{
+    // float: left;
+    height: 100%;
+    width: 100%;
+    // background: #b90b0b;
+}
+.container .infor{
+    height: 100%;
+    width: 77%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.infor .center{
+    margin-top: 5%;
+    height: 85%;
+    width: 93%;
+    background: #b4c1c7;
+}
+.center #cen-left{
+    height: 100%;
+    width: 48%;
+    background: #57b6e2;
+    float: left;
+}
+#cen-left #fullName{
+    // margin-top: 5%;
+    height: 15%;
+    width: 100%;
+    background: #7a909b;
+}
+#fullName h2{
+    height: 40%;
+    width: 100%;
+    background: #7a909b;
+}
+#fullName p{
+    // margin-top: 5%;
+    height: 15%;
+    width: 100%;
+    background: #7a909b;
+}
+.center #cen-right{
+    height: 100%;
+    width: 48%;
+    background: #19076b;
+    float: right;
+}
+ #btn-update{
+     margin-top: 2%;
+    height: 7%;
+    width: 30%;
+    background: #188356;
+    border-radius: 30rem;
+    margin-bottom: 1.4%;
+
+}
