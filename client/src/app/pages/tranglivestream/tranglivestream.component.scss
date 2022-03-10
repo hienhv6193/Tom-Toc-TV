@@ -37,12 +37,8 @@
     height: 15%;
     width: 100%;
 }
-img{
-    // width: 10%;
-    // height: 20%;
-    // margin-bottom:8%;
-    // margin-left:2% ;
-    // margin-top: 1%; 
+#avatar img{
+    border-radius: 50%;
     width: 60%;
     height: 85%;
     margin-top: 5%;
@@ -55,13 +51,17 @@ p{
     color:white ;
     // margin-right: 20%;
      margin-top: 6%;
-    margin-left: 5%; }
-// .title{
-//     margin-bottom: 5%;
-//     margin-left: 5px;
-//     width: 30%;
-//     padding-right: 1%;
-// }
+    margin-left: 5%; 
+}
+
+.title{
+    font-size: 1rem;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    width: 40%;
+    padding-right: 1%;
+}
+
 .SumLike{
     margin-right: 5%;
     width: 10%;
@@ -99,7 +99,7 @@ p{
 #DisLike h2{
     color: white;
 }
-#Sub{
+.Sub{
     font-size:200% ;
     margin-top:1%;
     width: 40%;
@@ -117,8 +117,8 @@ p{
 
 .subcribe:hover {
     cursor: pointer;
-
 }
+
 .subcribe h1 {
     color: white;
     margin: 0 auto;
@@ -130,6 +130,13 @@ p{
 #text-follow {
     margin-left: 5%;
     color: white;
+}
+
+.body__video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    outline: none;
 }
 
 // .Follow{
