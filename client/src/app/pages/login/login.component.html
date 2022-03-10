@@ -3,32 +3,33 @@
         <div class="logo" style="display: flex;justify-content: space-between;">
             <div style="display: flex; position: relative;">
                 <img src="../../../assets/images/Logo.png" style="width: fit-content;">
+                <button class="button button1">Đăng Nhập</button>
+                <button class="button button2" [routerLink]="['/signup']">Đăng Ký</button>
             </div>
-            <i class="fa fa-times fa-2x" aria-hidden="true" style="cursor: pointer;"></i>
+            
+            <i [routerLink]="['/']" class="fa fa-times fa-2x" aria-hidden="true" style="cursor: pointer;"></i>
         </div>
         <hr>
-        <h3 style="padding-left: 10px;"> Đăng Nhập</h3>
+        <h2 style="padding-left: 10px;"> Đăng Nhập</h2>
         <div class="formLogin">
             <form action="#">
                 <div class="biggerData">
                     <div class="data">
-                        <label>Tài khoản</label>
-                        <input matInput type="text" required placeholder="Email/SĐT">
+                        <input matInput  type="text" required placeholder="Email của bạn">
+                        
                     </div>
                     <div class="data">
-                        <label>Mật khẩu</label>
-                        <input matInput type="password" required placeholder="Nhập mật khảu">
+                        <div>
+                        <i class="fa fa-eye "  aria-hidden="true" style="cursor: pointer; padding-top: 8%;margin-left: 110%;"></i>
+                        <input matInput type="password" required placeholder="Nhập mật khẩu">
+                        </div>
                     </div>
-                    <div class="forgotP" style="margin:0;">
+                    <div class="forgotP" style="margin:-20px 0 0 2%;">
                         <a href="http://localhost:4200/forgetPass" style="float: left; color: rgba(173, 156, 208, 1);"> Quên mật khẩu ? </a>
                     </div>
                     <div class="loginBtn" style="margin-top: 20px;">
                         <div class="inner"></div>
                         <button> Đăng Nhập</button>
-                    </div>
-                    <div class="sign" style="display: flex; width: 130%; height: 30%; ">   
-                        <p>Chưa có tài khoản?</p>
-                        <a href="http://localhost:4200/signup" style=" color: rgba(173, 156, 208, 1);padding-left: 10px;" > Đăng kí ngay </a>
                     </div>
                 </div>
             </form>

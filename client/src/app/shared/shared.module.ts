@@ -13,8 +13,14 @@ import { SibabarProfileComponent } from '../components/sibabar-profile/sibabar-p
 @NgModule({
   declarations: [
   FooterComponent,
+<<<<<<< HEAD
   SideBarComponent, 
   SibabarProfileComponent,
+=======
+  InfHomeComponent,
+  SidebarComponent,
+
+>>>>>>> 97a077947049a66d46a4ed40807f6af42a614ab0
 ],
   imports: [
     CommonModule,

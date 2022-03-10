@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MobaComponent } from './moba.component';
+import { CreateStreamComponent } from './create-stream.component';
 
-describe('MobaComponent', () => {
-  let component: MobaComponent;
-  let fixture: ComponentFixture<MobaComponent>;
+describe('CreateStreamComponent', () => {
+  let component: CreateStreamComponent;
+  let fixture: ComponentFixture<CreateStreamComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MobaComponent ]
+      declarations: [ CreateStreamComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MobaComponent);
+    fixture = TestBed.createComponent(CreateStreamComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ForgetPassRoutingModule } from './forget-pass-routing.module';
-import { ForgetPassComponent } from './forget-pass.component';
+import { CreateStreamRoutingModule } from './create-stream-routing.module';
+import { CreateStreamComponent } from './create-stream.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-
 
 @NgModule({
   declarations: [
-    ForgetPassComponent
+    CreateStreamComponent
   ],
   imports: [
     CommonModule,
-    ForgetPassRoutingModule,
+    CreateStreamRoutingModule,
     SharedModule
   ]
 })
-export class ForgetPassModule { }
+export class CreateStreamModule { }
