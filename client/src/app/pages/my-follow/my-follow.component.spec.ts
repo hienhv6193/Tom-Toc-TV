@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InfHomeComponent } from './inf-home.component';
+import { MyFollowComponent } from './my-follow.component';
 
-describe('InfHomeComponent', () => {
-  let component: InfHomeComponent;
-  let fixture: ComponentFixture<InfHomeComponent>;
+describe('MyFollowComponent', () => {
+  let component: MyFollowComponent;
+  let fixture: ComponentFixture<MyFollowComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InfHomeComponent ]
+      declarations: [ MyFollowComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InfHomeComponent);
+    fixture = TestBed.createComponent(MyFollowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
