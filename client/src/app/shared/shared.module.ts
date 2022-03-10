@@ -8,7 +8,7 @@ import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
   FooterComponent,
@@ -17,12 +17,13 @@ import { SidebarComponent } from '../components/sidebar/sidebar.component';
 
 ],
   imports: [
+    MatDialogModule,
     CommonModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   exports: [
     FooterComponent,
@@ -33,10 +34,10 @@ import { SidebarComponent } from '../components/sidebar/sidebar.component';
     MatInputModule,
     MatIconModule,
     SidebarComponent,
-    MatIconModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ]
 })
 export class SharedModule { }
