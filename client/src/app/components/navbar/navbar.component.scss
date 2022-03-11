@@ -1,9 +1,10 @@
 .contain {
+	width: 100%;
 	background-color: #373737;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 2px;
+	padding: 0 1%;
 	border-bottom: #13131a;
 	position: fixed;
 	top: 0;
@@ -13,8 +14,9 @@
 }
 
 .contain .menu {
-	font-size: 25px;
-	margin: 0 3%;
+	width: 1%;
+	font-size: 2rem;
+	margin: 0 4%;
 	color: #fff;
 }
 
@@ -34,9 +36,9 @@
 
 .contain .navbar a{
 	display: flex;
-	padding: 0 3px;
+	padding: 0 1%;
 	text-decoration: none;
-	margin: 0 1rem;
+	margin: 0 2%;
 	font-size: 1.6rem;
 	color: #fff;
 }
@@ -55,21 +57,18 @@
 
 
 .contain .navbar .search-form {
-	float: right;
-	width: 50%;
-	height: 1rem;
+	width: 36%;
+	height: 21px;
 	display: flex;
 	align-items: center;
 	transform-origin: top;
 }
 
-.contain .navbar .search-form.active {
-	transform: scaleY(1);
-}
-
 .contain .navbar .search-form input {
-	font-size: 1.6rem;
-	padding: 0 2%;
+	width: auto;
+	font-size: 1.5rem;
+	padding: 0 3%;
+	padding-right: 2%;
 	border-radius: 1.5rem;
 	background-color: white;
 }
@@ -79,10 +78,10 @@
 	color: white;
 	cursor: pointer;
 	height: 35px;
-	width: 45px;
+	width: 5%;
 	font-size: 2.2rem;
-	margin-left: 10px;
-	padding-left: .2rem;
+	padding-right: 2rem;
+	margin-left: 5%;
 }
 
 .contain .navbar .search-form label:hover {
@@ -104,21 +103,20 @@
 .contain .login {
 	max-width: 100%;
 	display: flex;
-	margin-right: 3%;
+	margin-right: 5%;
 }
 
-button {
-	height: 38px;
-	width: 136px;
-	font-size: 20px;
-	margin-right: 18px;
+.login button {
+	height: 36px;
+	width: 50%;
+	font-size: 32px;
 	border-radius: 1.5rem;
 	color: #fff;
 	background-color: red;
 }
 
 .contain .divine {
-	margin: 0 17px 5px 5px;
+	margin: 0 20px;
 	border: 1px solid #fff;
 }
 
@@ -128,10 +126,18 @@ button {
 @media only screen and (max-width: 990px){
 	.contain {
 		height: auto;
+	}	
+
+	.menu {
+		width: 50%;
 	}
 
 	.contain .navbar {
-		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.login {
+		margin-right: 50%;
 	}
 }
 	
