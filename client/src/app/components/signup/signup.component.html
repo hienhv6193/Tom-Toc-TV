@@ -3,10 +3,10 @@
         <div class="logo" style="display: flex;justify-content: space-between;">
             <div style="display: flex; position: relative;">
                 <img src="../../../assets/images/Logo.png" style="width: fit-content;">
-                <button class="button button1"[routerLink]="['/login']">Đăng Nhập</button>
+                <button class="button button1"[mat-dialog-close]="" (click)="openSignIn()">Đăng Nhập</button>
                 <button class="button button2" >Đăng Ký</button>
             </div>
-            <i [routerLink]="['/login']" class="fa fa-arrow-left fa-2x" aria-hidden="true" style="cursor: pointer;"></i>
+            <i [mat-dialog-close]="" class="fa fa-times fa-2x" aria-hidden="true" style="cursor: pointer;"></i>
         </div>
         <hr>
         <h2 style="padding-left: 10px;"> Đăng Ký</h2>
@@ -20,7 +20,7 @@
                        
                         
                         <div>
-                        <mat-icon (click)="hide = !hide"  style="cursor: pointer; padding-top: 7%;margin-left: 110%;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        <mat-icon (click)="hide = !hide"  style="cursor: pointer; padding-top: 6%;margin-left: 100%;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                         <input   [type]="hide ? 'password' : 'text'" required placeholder="Mật khẩu của bạn">
                         </div>
                         <label style="color: aqua; font-size: 10px;margin-left: 3px;display: inline-block;">Mật khẩu nên là sự kết hợp của 6-20 ký tự và số</label>
@@ -28,8 +28,8 @@
                     </div>
                     <div class="data">
                         <div>
-                        <mat-icon (click)="hide = !hide"  style="cursor: pointer; padding-top: 7%;margin-left: 110%;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                        <input   [type]="hide ? 'password' : 'text'" required placeholder="Xác nhận mật khẩu" >
+                        <mat-icon (click)="hie = !hie"  style="cursor: pointer; padding-top: 6%;margin-left: 100%;">{{hie ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        <input   [type]="hie ? 'password' : 'text'" required placeholder="Xác nhận mật khẩu" >
                         </div>
                     </div>
                    

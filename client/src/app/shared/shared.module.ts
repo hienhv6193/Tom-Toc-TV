@@ -6,10 +6,10 @@ import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { SideBarComponent } from '../components/side-bar/side-bar.component';
-import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
+import { SideBarComponent } from '../components/side-bar/side-bar.component';
 import { SibabarProfileComponent } from '../components/sibabar-profile/sibabar-profile.component';
+
 @NgModule({
   declarations: [
   FooterComponent,
@@ -17,6 +17,7 @@ import { SibabarProfileComponent } from '../components/sibabar-profile/sibabar-p
   SibabarProfileComponent,
 ],
   imports: [
+    
     MatDialogModule,
     CommonModule,
     MatFormFieldModule,
@@ -24,24 +25,16 @@ import { SibabarProfileComponent } from '../components/sibabar-profile/sibabar-p
     MatInputModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatExpansionModule,
-    MatDialogModule
   ],
   exports: [
     FooterComponent,
     MatFormFieldModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatInputModule,
     MatIconModule,
-    MatIconModule,
+    SideBarComponent,
     MatInputModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    SideBarComponent, 
-    MatExpansionModule,
-    MatDialogModule,
-    SibabarProfileComponent,
+    MatDialogModule
   ]
 })
 export class SharedModule { }
