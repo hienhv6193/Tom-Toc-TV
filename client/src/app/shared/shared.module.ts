@@ -30,12 +30,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatInputModule,
     MatIconModule,
     SideBarComponent,
     MatInputModule,
-    ReactiveFormsModule,
-    MatButtonModule,
     MatDialogModule
   ]
 })
