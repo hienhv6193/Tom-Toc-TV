@@ -4,7 +4,7 @@
             <div style="display: flex; position: relative;">
                 <img src="../../../assets/images/Logo.png" style="width: fit-content;">
                 <button class="button button1">Đăng Nhập</button>
-                <button class="button button2" [routerLink]="['/signup']">Đăng Ký</button>
+                <button [mat-dialog-close]="" class="button button2"(click)="open()">Đăng Ký</button>
             </div>
             
             <i [mat-dialog-close]="" class="fa fa-times fa-2x" aria-hidden="true" style="cursor: pointer;"></i>
@@ -20,12 +20,12 @@
                     </div>
                     <div class="data">
                         <div>
-                        <mat-icon (click)="hide = !hide"  style="cursor: pointer; padding-top: 5%;margin-left: 110%;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        <mat-icon (click)="hide = !hide"  style="cursor: pointer; padding-top: 5%;margin-left: 100%;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                         <input   [type]="hide ? 'password' : 'text'"required placeholder="Nhập mật khẩu">
                         </div>
                     </div>
                     <div class="forgotP" style="margin:-20px 0 0 2%;">
-                        <a href="http://localhost:4200/forgetPass" style="float: left; color: rgba(173, 156, 208, 1);"> Quên mật khẩu ? </a>
+                        <a [mat-dialog-close]="" (click)="forget()" style="float: left; color: rgba(173, 156, 208, 1);cursor: pointer;"> Quên mật khẩu ? </a>
                     </div>
                     <div class="loginBtn" style="margin-top: 20px;">
                         <div class="inner"></div>
