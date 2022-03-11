@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ForgotComponent } from '../forgot/forgot.component';
+import { SignupComponent } from '../signup/signup.component';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -6,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
   hide=true;
-  constructor() { }
+  constructor(public dialog : MatDialog) { }
 
   ngOnInit(): void {
   }
-
+  open(){
+    this.dialog.open(SignupComponent, { panelClass: 'custom-dialog-container' })
+  }
+  forget(){
+    this.dialog.open(ForgotComponent, { panelClass: 'custom-dialog-container' })
+  }
 }
