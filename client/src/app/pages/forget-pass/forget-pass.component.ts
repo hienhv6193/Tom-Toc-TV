@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forget-pass.component.scss']
 })
 export class ForgetPassComponent implements OnInit {
-
+  hide=true;
   constructor() { }
 
   ngOnInit(): void {

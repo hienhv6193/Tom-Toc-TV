@@ -14,16 +14,15 @@
                    
                     <div class="data" style="margin-top: 30%;">
                         <div>
-                            <i class="fa fa-eye "  aria-hidden="true" style="cursor: pointer; padding-top: 8%;margin-left: 110%;"></i>
-                            <input matInput type="password" required placeholder="Nhập mật khẩu mới">
+                            <mat-icon (click)="hide = !hide"  style="cursor: pointer; padding-top: 8%;margin-left: 110%;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            <input  [type]="hide ? 'password' : 'text'"  required placeholder="Nhập mật khẩu mới">
                             </div>
-                            
-                            
+
                     </div>
                     <div class="data">
                         <div>
-                            <i class="fa fa-eye " aria-hidden="true" style="cursor: pointer; padding-top: 8%;margin-left: 110%;"></i>
-                            <input matInput type="password" required placeholder="Xác nhận mật khẩu" >
+                            <mat-icon (click)="hide = !hide"  style="cursor: pointer; padding-top: 8%;margin-left: 110%;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            <input  [type]="hide ? 'password' : 'text'"  required placeholder="Xác nhận mật khẩu" >
                             </div>
                     </div>
                     <div class="data">
