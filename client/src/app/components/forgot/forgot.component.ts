@@ -3,11 +3,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { SigninComponent } from '../signin/signin.component';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  selector: 'app-forgot',
+  templateUrl: './forgot.component.html',
+  styleUrls: ['./forgot.component.scss']
 })
-export class SignupComponent implements OnInit {
+export class ForgotComponent implements OnInit {
+
   hide=true;
   hie=true;
   constructor(public dialog : MatDialog) { }
@@ -17,5 +18,6 @@ export class SignupComponent implements OnInit {
   openSignIn(){
     this.dialog.open(SigninComponent, { panelClass: 'custom-dialog-container' })
   }
+
 
 }
