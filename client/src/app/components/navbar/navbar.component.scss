@@ -3,7 +3,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 2px;
+	padding: 0.3%;
+	height: 10%;
+	width: 100%;
 	border-bottom: #13131a;
 	position: fixed;
 	top: 0;
@@ -12,6 +14,21 @@
 	z-index: 1000;
 }
 
+
+// .contain .menu {
+// 	font-size: 30px;
+
+// 	margin: 3 3 3 3%;
+// 	height: 40%;
+// 	width: 40%;
+// 	color: #fff;s
+// }
+
+.contain .logo img {
+	margin-left: 130%;
+	width: 5rem;
+	height: 3.6rem;
+	
 .contain .menu {
 	font-size: 25px;
 	margin: 0 3%;
@@ -20,11 +37,13 @@
 
 .contain img {
 	height: 4rem;
+
 }
 	
 
 .contain .navbar {
-	padding: 0 5%;
+	padding: 0.5% 32% 0 14%;
+	font-size: 30rem;
 	text-transform: uppercase;
 	display: flex;
 	color: red;
@@ -34,19 +53,16 @@
 
 .contain .navbar a{
 	display: flex;
-	padding: 0 3px;
+	padding: 0 0.5%;
 	text-decoration: none;
 	margin: 0 1rem;
 	font-size: 1.6rem;
 	color: #fff;
 }
-
-.contain .navbar .category {
+.contain .navbar #category {
 	display: inline-block;
 	position: relative;
 }
-
-
 .contain .navbar a:hover {
 	color: #cc0000;
 	border-bottom: .1rem solid #cc0000;
@@ -78,11 +94,11 @@
 .contain .navbar .search-form label  {
 	color: white;
 	cursor: pointer;
-	height: 35px;
-	width: 45px;
-	font-size: 2.2rem;
-	margin-left: 10px;
-	padding-left: .2rem;
+	height: 100%;
+	width: 100%;
+	font-size: 2.3rem;
+	margin-left: 6%;
+	margin-top: -4%;
 }
 
 .contain .navbar .search-form label:hover {
@@ -100,18 +116,17 @@
 .contain .user  i:hover {
 	color: #cc0000;
 }
-
-.contain .login {
-	max-width: 100%;
+ .login {
 	display: flex;
-	margin-right: 3%;
+	float: right;
+	margin-left: -40%;
 }
 
 button {
-	height: 38px;
-	width: 136px;
+	height: 40%;
+	width: 140%;
 	font-size: 20px;
-	margin-right: 18px;
+	margin-left: 1%;
 	border-radius: 1.5rem;
 	color: #fff;
 	background-color: red;
@@ -122,21 +137,20 @@ button {
 	border: 1px solid #fff;
 }
 
-
-// a queries 
-
-@media only screen and (max-width: 990px){
+@media only screen and (max-width: 991px){
 	.contain {
 		height: auto;
 	}
 
 	.contain .navbar {
-		margin-left: 5%;
+		width: 5%;
+		font-size: 20px;
+	}
+	
+	.contain .search-form {
+		float: left;
+		width: 50%;
 	}
 }
-	
-	
-
-@media screen and (max-width:600px) {
-	
 }
+	

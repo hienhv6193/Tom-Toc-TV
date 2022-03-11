@@ -1,18 +1,14 @@
 .container{
-
     width: 100%;
     height: auto;
     background-color: rgba(40, 40, 40, 1);
     color: white;
     padding-bottom: 10px;
-
 }
 #icon{
     display: flex;
     position: relative;
-
 }
-
 .regis{
     display: flex;
 }
@@ -27,34 +23,34 @@
 
 }
 .about-content h2{
-    font-size: 25px;
-    padding-top: 5px;
+    font-size: 200%;
+    padding-top: 2%;
 
 }
 .link-content h2{
     position: relative;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 13%;
 
 }
 .link-content h2::before{
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -5%;
     left: 0;
-    width: 50px;
-    height: 2px;
+    width: 30%;
+    height: 8%;
     background: #f00;
 }
 .link-content{
-    padding-left: 80px;
-    padding-top: 60px;
+    padding-left: 5%;
+    padding-top: 4%;
 
 }
 .link-content ul li{
 
     text-decoration: none;
-    margin-bottom: 20px;
+    margin-bottom: 10%;
     font-size: larger;
 
 }
@@ -62,7 +58,7 @@
     border-left: solid white;
     height: 200px;
     margin-left: 5%;
-    margin-top: 50px;
+    margin-top: 5%;
 }
 .link-content  li:hover{
     color: rgba(64, 64, 238, 0.856);
