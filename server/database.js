@@ -21,5 +21,15 @@ class Database{
         })
         return temp
     }
+    
+    async getItemid(){
+      let temp;
+      (await firestore.collection("UserInfo")
+      .get())
+      .docs.map((data)=>{
+        temp = data.data();
+      })
+      return temp;
+  }
 }
 module.exports=Database;
