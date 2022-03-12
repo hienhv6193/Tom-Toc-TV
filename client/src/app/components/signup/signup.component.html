@@ -60,7 +60,7 @@
     </div>
 </div>
 
-<div class="auth" style="width: 400px;" *ngIf="user">
+<div class="auth"  style="width: 400px;" *ngIf="user" [mat-dialog-close]="onCloseConfirm()">
   <mat-icon style="color: rgb(47, 255, 127);margin-left: 40%;font-size: 60px;">check_circle</mat-icon>
   <h3 style="padding: 10px 0 10px 0; text-align: center;color: rgb(47, 255, 127);font-size: 30px;"> Đăng nhập thành công</h3>
 </div>

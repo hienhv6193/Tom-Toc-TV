@@ -29,6 +29,11 @@ export class SigninComponent implements OnInit {
     }
   ngOnInit(): void {
   }
+  onCloseConfirm() {
+    setTimeout(() => {
+      this.dialog.closeAll();
+    }, 1200);
+  }
   
   open(){
     this.dialog.open(SignupComponent, { panelClass: 'custom-dialog-container' })
