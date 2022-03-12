@@ -1,0 +1,60 @@
+<div class="center">
+    <div class="container">
+        <div class="logo" style="display: flex;justify-content: space-between;">
+            <div style="display: flex; position: relative;">
+                <img src="../../../assets/images/Logo.png" style="width: fit-content;">
+            </div>
+            <i [mat-dialog-close]="" (click)="openSignIn()" class="fa fa-arrow-left fa-2x" aria-hidden="true" style="cursor: pointer;"></i>
+        </div>
+        <hr>
+        <h2 style="padding-left: 10px;">Quên Mật Khẩu</h2>
+        <div class="formLogin">
+            <form action="http://localhost:4200/login">
+                <div class="biggerData">
+                   
+                    <div class="data" style="margin-top: 30%;">
+                        <div>
+                            <mat-icon (click)="hide = !hide"  style="cursor: pointer; padding-top: 6%;margin-left: 110%;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            <input  [type]="hide ? 'password' : 'text'"  required placeholder="Nhập mật khẩu mới">
+                            </div>
+
+                    </div>
+                    <div class="data">
+                        <div>
+                            <mat-icon (click)="hie = !hie"  style="cursor: pointer; padding-top: 6%;margin-left: 110%;">{{hie ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            <input  [type]="hie ? 'password' : 'text'"  required placeholder="Xác nhận mật khẩu" >
+                            </div>
+                    </div>
+                    <div class="data">
+                        <input  type="text" required placeholder="Email xác thực">
+                    </div>
+                   
+                    <div class="loginBtn" style="margin-top: 20px;">
+                        <div class="inner"></div>
+                        <button [mat-dialog-close]="" (click)="openSignIn()" > Gửi</button>
+                    </div>
+                </div>
+            </form>
+            <div class="vl"></div>
+            <div class="otherLogin" style="justify-content: center;">
+                <h2>Đăng nhập bằng bên thứ 3</h2>
+                <div id="customBtn" class="customGPlusSignIn" style="margin-top: 5%;">
+                    <span class="icon"></span>
+                    <span class="buttonText">Đăng nhập bằng Google</span>
+                </div>
+                <div id="customBtn2" class="customGPlusSignIn">
+                    <span class="icon2"></span>
+                    <span class="buttonText">Đăng nhập với FaceBook</span>
+                </div>
+                <div class="term" >
+                    <input type="checkbox">
+                     Đồng ý với  <a href="#" style=" color: rgba(173, 156, 208, 1);"> thoả thuận người
+                        dùng  </a>  và  <a href="#" style=" color: rgba(173, 156, 208, 1);" > chính sách quyền riêng tư </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
