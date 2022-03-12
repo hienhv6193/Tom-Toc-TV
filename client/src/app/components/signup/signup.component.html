@@ -1,4 +1,4 @@
-<div class="center">
+<div class="center" *ngIf="!user">
     <div class="container">
         <div class="logo" style="display: flex;justify-content: space-between;">
             <div style="display: flex; position: relative;">
@@ -42,11 +42,11 @@
             <div class="vl"></div>
             <div class="otherLogin" style="justify-content: center;">
                 <h2>Đăng nhập bằng bên thứ 3</h2>
-                <div id="customBtn" class="customGPlusSignIn" style="margin-top: 5%;">
+                <div id="customBtn" class="customGPlusSignIn" style="margin-top: 5%;"(click)="login()">
                     <span class="icon"></span>
                     <span class="buttonText">Đăng nhập bằng Google</span>
                 </div>
-                <div id="customBtn2" class="customGPlusSignIn">
+                <div id="customBtn2" class="customGPlusSignIn" (click)="loginF()">
                     <span class="icon2"></span>
                     <span class="buttonText">Đăng nhập với FaceBook</span>
                 </div>
@@ -58,6 +58,11 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="auth" style="width: 400px;" *ngIf="user">
+  <mat-icon style="color: rgb(47, 255, 127);margin-left: 40%;font-size: 60px;">check_circle</mat-icon>
+  <h3 style="padding: 10px 0 10px 0; text-align: center;color: rgb(47, 255, 127);font-size: 30px;"> Đăng nhập thành công</h3>
 </div>
 
 

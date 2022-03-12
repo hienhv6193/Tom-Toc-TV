@@ -8,6 +8,10 @@ import { SharedModule } from './shared/shared.module';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ForgotComponent } from './components/forgot/forgot.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -24,6 +28,9 @@ import { ForgotComponent } from './components/forgot/forgot.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
     
   ],
   providers: [],
