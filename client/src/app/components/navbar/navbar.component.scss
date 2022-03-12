@@ -1,11 +1,10 @@
 .contain {
+	width: 100%;
 	background-color: #373737;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0.3%;
-	height: 10%;
-	width: 100%;
+	padding: 0 1%;
 	border-bottom: #13131a;
 	position: fixed;
 	top: 0;
@@ -14,36 +13,20 @@
 	z-index: 1000;
 }
 
-
-// .contain .menu {
-// 	font-size: 30px;
-
-// 	margin: 3 3 3 3%;
-// 	height: 40%;
-// 	width: 40%;
-// 	color: #fff;s
-// }
-
-.contain .logo img {
-	margin-left: 130%;
-	width: 5rem;
-	height: 3.6rem;
-	
 .contain .menu {
-	font-size: 25px;
-	margin: 0 3%;
+	width: 1%;
+	font-size: 2rem;
+	margin: 0 4%;
 	color: #fff;
 }
 
 .contain img {
 	height: 4rem;
-
 }
 	
 
 .contain .navbar {
-	padding: 0.5% 32% 0 14%;
-	font-size: 30rem;
+	padding: 0 5%;
 	text-transform: uppercase;
 	display: flex;
 	color: red;
@@ -53,16 +36,19 @@
 
 .contain .navbar a{
 	display: flex;
-	padding: 0 0.5%;
+	padding: 0 1%;
 	text-decoration: none;
-	margin: 0 1rem;
+	margin: 0 2%;
 	font-size: 1.6rem;
 	color: #fff;
 }
-.contain .navbar #category {
+
+.contain .navbar .category {
 	display: inline-block;
 	position: relative;
 }
+
+
 .contain .navbar a:hover {
 	color: #cc0000;
 	border-bottom: .1rem solid #cc0000;
@@ -71,21 +57,18 @@
 
 
 .contain .navbar .search-form {
-	float: right;
-	width: 50%;
-	height: 1rem;
+	width: 36%;
+	height: 21px;
 	display: flex;
 	align-items: center;
 	transform-origin: top;
 }
 
-.contain .navbar .search-form.active {
-	transform: scaleY(1);
-}
-
 .contain .navbar .search-form input {
-	font-size: 1.6rem;
-	padding: 0 2%;
+	width: auto;
+	font-size: 1.5rem;
+	padding: 0 3%;
+	padding-right: 2%;
 	border-radius: 1.5rem;
 	background-color: white;
 }
@@ -94,11 +77,11 @@
 .contain .navbar .search-form label  {
 	color: white;
 	cursor: pointer;
-	height: 100%;
-	width: 100%;
-	font-size: 2.3rem;
-	margin-left: 6%;
-	margin-top: -4%;
+	height: 35px;
+	width: 5%;
+	font-size: 2.2rem;
+	padding-right: 2rem;
+	margin-left: 5%;
 }
 
 .contain .navbar .search-form label:hover {
@@ -116,41 +99,50 @@
 .contain .user  i:hover {
 	color: #cc0000;
 }
- .login {
+
+.contain .login {
+	max-width: 100%;
 	display: flex;
-	float: right;
-	margin-left: -40%;
+	margin-right: 5%;
 }
 
-button {
-	height: 40%;
-	width: 140%;
-	font-size: 20px;
-	margin-left: 1%;
+.login button {
+	height: 36px;
+	width: 50%;
+	font-size: 32px;
 	border-radius: 1.5rem;
 	color: #fff;
 	background-color: red;
 }
 
 .contain .divine {
-	margin: 0 17px 5px 5px;
+	margin: 0 20px;
 	border: 1px solid #fff;
 }
 
-@media only screen and (max-width: 991px){
+
+// a queries 
+
+@media only screen and (max-width: 990px){
 	.contain {
 		height: auto;
+	}	
+
+	.menu {
+		width: 50%;
 	}
 
 	.contain .navbar {
-		width: 5%;
-		font-size: 20px;
+		margin-right: 5%;
 	}
-	
-	.contain .search-form {
-		float: left;
-		width: 50%;
+
+	.login {
+		margin-right: 50%;
 	}
 }
-}
 	
+	
+
+@media screen and (max-width:600px) {
+	
+}
