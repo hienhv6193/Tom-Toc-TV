@@ -1,10 +1,22 @@
+*{
+	
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	left:0;
+	top: 0;
+	font-family: sans-serif;
+    }
+
+
 .contain {
+	height: 10%;
 	width: 100%;
 	background-color: #373737;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 1%;
 	border-bottom: #13131a;
 	position: fixed;
 	top: 0;
@@ -13,20 +25,27 @@
 	z-index: 1000;
 }
 
-.contain .menu {
-	width: 1%;
-	font-size: 2rem;
-	margin: 0 4%;
-	color: #fff;
+.contain label {
+	padding-left: 3%;
+}
+
+
+.contain label #btn{
+	display: none;
+}
+
+.contain .logo {
+	width: 3%;
+	height: auto;
 }
 
 .contain img {
-	height: 4rem;
+	height: 3rem;
 }
 	
 
 .contain .navbar {
-	padding: 0 5%;
+	padding: 0 12% 0 5%;
 	text-transform: uppercase;
 	display: flex;
 	color: red;
@@ -39,7 +58,7 @@
 	padding: 0 1%;
 	text-decoration: none;
 	margin: 0 2%;
-	font-size: 1.6rem;
+	font-size: 150%;
 	color: #fff;
 }
 
@@ -66,10 +85,10 @@
 
 .contain .navbar .search-form input {
 	width: auto;
-	font-size: 1.5rem;
+	font-size: 150%;
 	padding: 0 3%;
 	padding-right: 2%;
-	border-radius: 1.5rem;
+	border-radius: 1rem;
 	background-color: white;
 }
 
@@ -77,10 +96,10 @@
 .contain .navbar .search-form label  {
 	color: white;
 	cursor: pointer;
-	height: 35px;
+	height: 130%;
 	width: 5%;
-	font-size: 2.2rem;
-	padding-right: 2rem;
+	font-size: 200%;
+	padding-right: 2%;
 	margin-left: 5%;
 }
 
@@ -107,16 +126,17 @@
 }
 
 .login button {
-	height: 36px;
+	height: 36%;
 	width: 50%;
-	font-size: 32px;
+	font-size: 150%;
 	border-radius: 1.5rem;
 	color: #fff;
 	background-color: red;
 }
 
 .contain .divine {
-	margin: 0 20px;
+	padding: 0 ;
+	margin: 0 3%;
 	border: 1px solid #fff;
 }
 
@@ -125,19 +145,12 @@
 
 @media only screen and (max-width: 990px){
 	.contain {
-		height: auto;
-	}	
+		width: auto;
 
-	.menu {
-		width: 50%;
 	}
-
-	.contain .navbar {
-		margin-right: 5%;
-	}
-
-	.login {
-		margin-right: 50%;
+	.contain .logo {
+		width: 3%;
+		margin-right: 2%;
 	}
 }
 	
