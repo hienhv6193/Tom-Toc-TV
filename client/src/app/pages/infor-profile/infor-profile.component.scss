@@ -1,7 +1,7 @@
 .container{
     height: 100%;
     width: 100%;
-    background: #C4C4C4;
+    background: black;
 }
 .container .sidebar{
     float: left;
@@ -16,8 +16,9 @@
     // background: #b90b0b;
 }
 .container .infor{
-    height: 100%;
-    width: 77%;
+    margin: 8% 2% 0 2%;
+    height: fit-content;
+    width: 73%;
     float: right;
     display: flex;
     align-items: center;
@@ -113,7 +114,7 @@
     flex-direction: row;
 }
  #btn-update{
-     margin-top: 2%;
+    margin-top: 2%;
     height: 7%;
     width: 90%;
     // background: #188356;
@@ -125,7 +126,8 @@
    height: 100%;
    width: 30%;
    color:#fff;
-   background: #f3b227;
-   border-radius: 30rem;
+   background: #f44336;
+   border-radius: 10px;
    font-size: 2rem;
 }
+

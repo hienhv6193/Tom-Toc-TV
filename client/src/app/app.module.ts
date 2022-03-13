@@ -1,4 +1,5 @@
 import { NavbarComponent } from './components/navbar/navbar.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +24,7 @@ import { ForgotComponent } from './components/forgot/forgot.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

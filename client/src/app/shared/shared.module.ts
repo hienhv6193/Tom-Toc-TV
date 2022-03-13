@@ -1,3 +1,4 @@
+import { NavbarComponent } from './../components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../components/footer/footer.component';
@@ -16,9 +17,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 @NgModule({
   declarations: [
   FooterComponent,
-  SideBarComponent, 
+  SideBarComponent,
   SibabarProfileComponent,
   FontEditProfileComponent,
+
 ],
   imports: [
     MatDialogModule,
@@ -43,13 +45,14 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatInputModule,
     ReactiveFormsModule,
     MatButtonModule,
-    SideBarComponent, 
+    SideBarComponent,
     MatDialogModule,
     SibabarProfileComponent,
     FontEditProfileComponent,
     MatDatepickerModule,
     MatSelectModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+
   ]
 })
 export class SharedModule { }
