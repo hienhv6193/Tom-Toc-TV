@@ -25,6 +25,16 @@
 	z-index: 1000;
 }
 
+<<<<<<< HEAD
+.contain .menu {
+	font-size: 25px;
+	margin: 0 3%;
+	color: #fff;
+}
+
+.contain img {
+	height: 4rem;
+=======
 .contain label {
 	padding-left: 3%;
 }
@@ -41,11 +51,17 @@
 
 .contain img {
 	height: 3rem;
+>>>>>>> b30b4b29c2e0840f8b7f34cc113f87ad801f3e6f
 }
 	
 
 .contain .navbar {
+<<<<<<< HEAD
+	padding: 0.5% 32% 0 14%;
+	font-size: 30rem;
+=======
 	padding: 0 12% 0 5%;
+>>>>>>> b30b4b29c2e0840f8b7f34cc113f87ad801f3e6f
 	text-transform: uppercase;
 	display: flex;
 	color: red;
@@ -61,8 +77,12 @@
 	font-size: 150%;
 	color: #fff;
 }
+<<<<<<< HEAD
+.contain .navbar #category {
+=======
 
 .contain .navbar .category {
+>>>>>>> b30b4b29c2e0840f8b7f34cc113f87ad801f3e6f
 	display: inline-block;
 	position: relative;
 }
@@ -96,11 +116,19 @@
 .contain .navbar .search-form label  {
 	color: white;
 	cursor: pointer;
+<<<<<<< HEAD
+	height: 100%;
+	width: 100%;
+	font-size: 2.3rem;
+	margin-left: 6%;
+	margin-top: -4%;
+=======
 	height: 130%;
 	width: 5%;
 	font-size: 200%;
 	padding-right: 2%;
 	margin-left: 5%;
+>>>>>>> b30b4b29c2e0840f8b7f34cc113f87ad801f3e6f
 }
 
 .contain .navbar .search-form label:hover {
@@ -118,11 +146,18 @@
 .contain .user  i:hover {
 	color: #cc0000;
 }
+<<<<<<< HEAD
+ .login {
+	display: flex;
+	float: right;
+	margin-left: -40%;
+=======
 
 .contain .login {
 	max-width: 100%;
 	display: flex;
 	margin-right: 5%;
+>>>>>>> b30b4b29c2e0840f8b7f34cc113f87ad801f3e6f
 }
 
 .login button {
@@ -140,13 +175,31 @@
 	border: 1px solid #fff;
 }
 
+<<<<<<< HEAD
+@media only screen and (max-width: 991px){
+=======
 
 // a queries 
 
 @media only screen and (max-width: 990px){
+>>>>>>> b30b4b29c2e0840f8b7f34cc113f87ad801f3e6f
 	.contain {
 		width: auto;
 
+<<<<<<< HEAD
+	.contain .navbar {
+		width: 5%;
+		font-size: 20px;
+	}
+	
+	.contain .search-form {
+		float: left;
+		width: 50%;
+	}
+}
+	
+	
+=======
 	}
 	.contain .logo {
 		width: 3%;
@@ -159,3 +212,4 @@
 @media screen and (max-width:600px) {
 	
 }
+>>>>>>> b30b4b29c2e0840f8b7f34cc113f87ad801f3e6f

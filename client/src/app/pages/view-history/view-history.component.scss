@@ -1,73 +1,141 @@
 .container{
-    margin-top: 4.75%;
     height: 100%;
     width: 100%;
-    background-color: #000000;
-    padding-top: 5%;
+    // background: #C4C4C4;
 }
-.font{
-    height: 100%;
-    width: 100%;
-    background-color: #373737;
-}
- .title{
-    height: 15%;
-    width: 100%;
-    // background-color: #eb4040;
-    border-bottom: 0.2rem solid #000000;
-}
-.title span{
-    height: 100%;
-    width: 10%;
-    color: white;
-    // background-color: #60571d;
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
+.container .sidebar{
     float: left;
-    align-content: center;
-    justify-content: center;
-}
-.title p{
-    height: 85%;
-    width: 90%;
-    padding-top: 1%;
-    color: white;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    bottom: 0;
-    float: left;
-}
-.font .frames{
-    height: 84.7%;
-    width: 100%;
-    // background-color: rgb(197, 48, 185);
-}
-.card{
     height: 100%;
-    width: 15%;
-    // background-color: #cc0c0c;
-    float: left;
-    border-right: 0.2rem solid #F3F0F0;
+    width: 23%;
+    // background: #b90b0b;
 }
-
-.card p{
-    height: 20%;
-    width: 100%;
-    color: #ffffff;
-    background-color: 373737;
-    display: flex;
-    align-items: center;
-    font-size: 1.3rem;
-    float: left;
-    align-content: center;
-    justify-content: center;
-}
-.fra-info{
+ app-sibabar-profile{
+    // float: left;
     height: 100%;
-    width: 80%;
-    // background-color: #611bbd;
+    width: 100%;
+    // background: #b90b0b;
+}
+.container .infor{
+    height: 100%;
+    width: 77%;
     float: right;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // align-content: center;
+    // flex-direction: column;
+    background: #232323;
+}
+.infor .center{
+    margin-top: 5%;
+    margin-left: 4%;
+    height: 91.8%;
+    width: 96%;
+    // background: #60a1be;
+    // display: grid;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:left;
 
 }
+.center .video{
+    height: 25%;
+    width: 18%;
+    background: #535252bb;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    // flex-direction: column;
+}
+.video img{
+    height: 75%;
+    width: 100%;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    // background: #535252bb;
+    // margin-right: 3%;
+    // margin-bottom: 3%;
+    // display: flex;
+    // border-radius: 0.3rem;
+    // align-items: center;
+    // justify-content: center;
+    // align-content: center; 
+}
+.video .conten{
+    height: 25%;
+    width: 100%;
+    background: #535252bb;
+    // margin-right: 3%;
+    // margin-bottom: 3%;
+    display: flex;
+    border-radius: 0.3rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.conten img{
+    height: 70%;
+    width: 17%;
+    background: #3c1a9b;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2%;
+    margin-left: -4.5%;
+    // float:left;
+}
+.center div{
+    height: 3rem;
+    width: 67%;
+}
+.conten div p{
+    height: 40%;
+    width: 100%;
+    // margin-top: 2%;
+    padding-left: 2%;
+    display: flex;
+    font-weight: bold;
+    font-size: 120%;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    color: white;
+}
+.center div .user-view{
+    height: 40%;
+    width: 40%;
+    // background-color: #b90b0b;
+    display: flex;
+    margin-left: 3%;
+}
+.user-view i{
+    height: 30%;
+    width: 30%;
+    color: #cec7c7fa;
+    font-size: 0.8rem;
+    // background-color: #b90b0b;
+}
+.user-view h5{
+    margin-top: 5%;
+    height: 40%;
+    width: 100%;
+    // margin-top: 2%;
+    padding-left: 7%;
+    display: flex;
+    font-size: 0.9rem;
+    margin-left: 6%;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    color: gray;
+    color: #dfd7d7fa;
+    // background-color: #b90b0b;
+}
+
+
+
