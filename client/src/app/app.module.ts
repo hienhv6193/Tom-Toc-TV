@@ -1,4 +1,5 @@
 import { NavbarComponent } from './components/navbar/navbar.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +13,6 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-
 
 @NgModule({
   declarations: [
@@ -28,10 +28,14 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+<<<<<<< HEAD
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     
+=======
+
+>>>>>>> 69f8ef1f7d89e75017d923aa62e6c6805617ac55
   ],
   providers: [],
   bootstrap: [AppComponent]
