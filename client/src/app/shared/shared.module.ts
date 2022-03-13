@@ -6,9 +6,8 @@ import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { SideBarComponent } from '../components/side-bar/side-bar.component';
-import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
+import { SideBarComponent } from '../components/side-bar/side-bar.component';
 import { SibabarProfileComponent } from '../components/sibabar-profile/sibabar-profile.component';
 import { FontEditProfileComponent } from '../components/font-edit-profile/font-edit-profile.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -22,13 +21,13 @@ import {MatPaginatorModule} from '@angular/material/paginator';
   FontEditProfileComponent,
 ],
   imports: [
+    MatDialogModule,
     CommonModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatExpansionModule,
     MatDialogModule,
     MatDatepickerModule,
     MatSelectModule,
@@ -39,14 +38,12 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatInputModule,
     MatIconModule,
-    MatIconModule,
+    SideBarComponent,
     MatInputModule,
     ReactiveFormsModule,
     MatButtonModule,
     SideBarComponent, 
-    MatExpansionModule,
     MatDialogModule,
     SibabarProfileComponent,
     FontEditProfileComponent,

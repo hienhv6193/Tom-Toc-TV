@@ -1,24 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { SigninComponent } from '../signin/signin.component';
+import { ForgotComponent } from '../forgot/forgot.component';
 import { SignupComponent } from '../signup/signup.component';
-
-
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  selector: 'app-signin',
+  templateUrl: './signin.component.html',
+  styleUrls: ['./signin.component.scss']
 })
-export class NavbarComponent implements OnInit {
-
+export class SigninComponent implements OnInit {
+  hide=true;
   constructor(public dialog : MatDialog) { }
 
   ngOnInit(): void {
   }
-  openDialog(){
-    this.dialog.open(SigninComponent, { panelClass: 'custom-dialog-container' })
-  }
   open(){
     this.dialog.open(SignupComponent, { panelClass: 'custom-dialog-container' })
+  }
+  forget(){
+    this.dialog.open(ForgotComponent, { panelClass: 'custom-dialog-container' })
   }
 }
