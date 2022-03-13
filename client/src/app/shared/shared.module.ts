@@ -10,17 +10,16 @@ import { SideBarComponent } from '../components/side-bar/side-bar.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
 import { SibabarProfileComponent } from '../components/sibabar-profile/sibabar-profile.component';
+import { FontEditProfileComponent } from '../components/font-edit-profile/font-edit-profile.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
+import {MatPaginatorModule} from '@angular/material/paginator';
 @NgModule({
   declarations: [
   FooterComponent,
-<<<<<<< HEAD
   SideBarComponent, 
   SibabarProfileComponent,
-=======
-  InfHomeComponent,
-  SidebarComponent,
-
->>>>>>> 97a077947049a66d46a4ed40807f6af42a614ab0
+  FontEditProfileComponent,
 ],
   imports: [
     CommonModule,
@@ -30,7 +29,10 @@ import { SibabarProfileComponent } from '../components/sibabar-profile/sibabar-p
     ReactiveFormsModule,
     MatButtonModule,
     MatExpansionModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatPaginatorModule
   ],
   exports: [
     FooterComponent,
@@ -47,6 +49,10 @@ import { SibabarProfileComponent } from '../components/sibabar-profile/sibabar-p
     MatExpansionModule,
     MatDialogModule,
     SibabarProfileComponent,
+    FontEditProfileComponent,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatPaginatorModule
   ]
 })
 export class SharedModule { }

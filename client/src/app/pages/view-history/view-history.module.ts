@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ViewHistoryRoutingModule } from './view-history-routing.module';
 import { ViewHistoryComponent } from './view-history.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ViewHistoryComponent } from './view-history.component';
   ],
   imports: [
     CommonModule,
-    ViewHistoryRoutingModule
+    ViewHistoryRoutingModule,
+    SharedModule
   ]
 })
 export class ViewHistoryModule { }

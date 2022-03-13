@@ -1,0 +1,55 @@
+<div>
+<h1 mat-dialog-title>Chỉnh sửa thông tin</h1>
+<div mat-dialog-content>
+    <form class="example-form" [formGroup]="formitem">
+        <table class="example-full-width" cellspacing="0"><tr>
+          <!-- <td><mat-form-field class="example-full-width" appearance="fill" style="padding-right: 3%;">
+            <mat-label>Họ tên</mat-label>
+            <input matInput formControlName="name" type="text">
+          </mat-form-field></td> -->
+          <td>
+            <mat-form-field class="example-full-width"  appearance="fill">
+                <mat-label>Giới tính</mat-label>
+                <mat-select formControlName="sex" >
+                  <mat-option *ngFor="let sex of sexs" [value]="sex.value"  >
+                    {{sex.value}} 
+                  </mat-option>
+                </mat-select>
+                <!-- <input matInput formControlName="sex" type="text"> -->
+            </mat-form-field>
+        </td>
+        </tr></table>
+          
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Ngày sinh</mat-label>
+            <textarea matInput formControlName="DoB" type="text"></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Vui lòng nhập một địa chỉ email hợp lệ
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Sai cú pháp vui lòng nhập lại
+            </mat-error>
+          </mat-form-field>
+
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Điện thoại</mat-label>
+            <textarea matInput matInput formControlName="phone" type="number"></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>coin</mat-label>
+            <textarea matInput matInput formControlName="coin" type="number"></textarea>
+          </mat-form-field>
+      </form>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-flat-button mat-dialog-close color="warn" >Đóng</button> 
+    <button mat-flat-button mat-dialog-close color="primary" style="margin-left: 67%;" >Cập nhật</button> 
+</div>

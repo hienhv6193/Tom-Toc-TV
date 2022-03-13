@@ -14,22 +14,6 @@
 	z-index: 1000;
 }
 
-<<<<<<< HEAD
-// .contain .menu {
-// 	font-size: 30px;
-
-// 	margin: 3 3 3 3%;
-// 	height: 40%;
-// 	width: 40%;
-// 	color: #fff;s
-// }
-
-.contain .logo img {
-	margin-left: 130%;
-	width: 5rem;
-	height: 3.6rem;
-	
-=======
 .contain .menu {
 	font-size: 25px;
 	margin: 0 3%;
@@ -38,17 +22,12 @@
 
 .contain img {
 	height: 4rem;
->>>>>>> 97a077947049a66d46a4ed40807f6af42a614ab0
 }
 	
 
 .contain .navbar {
-<<<<<<< HEAD
 	padding: 0.5% 32% 0 14%;
 	font-size: 30rem;
-=======
-	padding: 0 5%;
->>>>>>> 97a077947049a66d46a4ed40807f6af42a614ab0
 	text-transform: uppercase;
 	display: flex;
 	color: red;
@@ -64,12 +43,7 @@
 	font-size: 1.6rem;
 	color: #fff;
 }
-<<<<<<< HEAD
 .contain .navbar #category {
-=======
-
-.contain .navbar .category {
->>>>>>> 97a077947049a66d46a4ed40807f6af42a614ab0
 	display: inline-block;
 	position: relative;
 }
@@ -104,19 +78,11 @@
 .contain .navbar .search-form label  {
 	color: white;
 	cursor: pointer;
-<<<<<<< HEAD
 	height: 100%;
 	width: 100%;
 	font-size: 2.3rem;
 	margin-left: 6%;
 	margin-top: -4%;
-=======
-	height: 35px;
-	width: 45px;
-	font-size: 2.2rem;
-	margin-left: 10px;
-	padding-left: .2rem;
->>>>>>> 97a077947049a66d46a4ed40807f6af42a614ab0
 }
 
 .contain .navbar .search-form label:hover {
@@ -134,18 +100,10 @@
 .contain .user  i:hover {
 	color: #cc0000;
 }
-<<<<<<< HEAD
  .login {
 	display: flex;
 	float: right;
 	margin-left: -40%;
-=======
-
-.contain .login {
-	max-width: 100%;
-	display: flex;
-	margin-right: 3%;
->>>>>>> 97a077947049a66d46a4ed40807f6af42a614ab0
 }
 
 button {
@@ -163,20 +121,12 @@ button {
 	border: 1px solid #fff;
 }
 
-<<<<<<< HEAD
 @media only screen and (max-width: 991px){
-=======
-
-// a queries 
-
-@media only screen and (max-width: 990px){
->>>>>>> 97a077947049a66d46a4ed40807f6af42a614ab0
 	.contain {
 		height: auto;
 	}
 
 	.contain .navbar {
-<<<<<<< HEAD
 		width: 5%;
 		font-size: 20px;
 	}
@@ -188,14 +138,3 @@ button {
 }
 	
 	
-=======
-		margin-left: 5%;
-	}
-}
-	
-	
-
-@media screen and (max-width:600px) {
-	
-}
->>>>>>> 97a077947049a66d46a4ed40807f6af42a614ab0
