@@ -1,22 +1,10 @@
-*{
-
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-decoration: none;
-	left:0;
-	top: 0;
-	font-family: sans-serif;
-    }
-
-
 .contain {
 	height: 10%;
 	width: 100%;
 	background-color: #373737;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	// justify-content: space-between;
 	border-bottom: #13131a;
 	position: fixed;
 	top: 0;
@@ -24,19 +12,10 @@
 	right: 0;
 	z-index: 1000;
 }
-
-.contain label {
-	padding-left: 3%;
-}
-
-
-.contain label #btn{
-	display: none;
-}
-
 .contain .logo {
 	width: 3%;
 	height: auto;
+	margin-left: 10%;
 }
 
 .contain img {
@@ -46,48 +25,46 @@
 
 .contain .navbar {
 	padding: 0 12% 0 5%;
-	text-transform: uppercase;
+	width: 80%;
 	display: flex;
-	color: red;
+	color: black;
 	list-style-type: none;
+	justify-content: space-between;
 }
 
 
 .contain .navbar a{
 	display: flex;
-	padding: 0 1%;
 	text-decoration: none;
-	margin: 0 2%;
-	font-size: 150%;
+	margin: 0 15%;
+	font-size: 20px;
 	color: #fff;
 }
 
-.contain .navbar .category {
-	display: inline-block;
-	position: relative;
-}
 
 
 .contain .navbar a:hover {
 	color: #cc0000;
 	border-bottom: .1rem solid #cc0000;
-	padding-bottom: .5rem;
 }
 
 
 .contain .navbar .search-form {
-	width: 36%;
+	
+	position: relative;
+	width: 70%;
 	height: 21px;
+	margin-left: 30%;
 	display: flex;
 	align-items: center;
 	transform-origin: top;
 }
 
 .contain .navbar .search-form input {
-	width: auto;
-	font-size: 150%;
+	width: 300px;
+	font-size: 15px;
 	padding: 0 3%;
-	padding-right: 2%;
+	// padding-right: 2%;
 	border-radius: 1rem;
 	background-color: white;
 }
@@ -96,9 +73,9 @@
 .contain .navbar .search-form label  {
 	color: white;
 	cursor: pointer;
-	height: 130%;
+	height: 100%;
 	width: 5%;
-	font-size: 200%;
+	font-size: 20px;
 	padding-right: 2%;
 	margin-left: 5%;
 }
@@ -107,55 +84,108 @@
 	color: #cc0000;
 }
 
-.contain .user  {
-	margin-right: 20px;
-	cursor: pointer;
-	font-size: 2.5rem;
-	margin-right: 1.5rem;
-	color: white;
-}
-
-.contain .user  i:hover {
-	color: #cc0000;
-}
 
 .contain .login {
+	position: relative;
 	max-width: 100%;
+	height: 100%;
 	display: flex;
 	margin-right: 5%;
+	margin-left: 20%;
 }
 
 .login button {
-	height: 36%;
+	height: 37%;
 	width: 50%;
-	font-size: 150%;
-	border-radius: 1.5rem;
+	margin-top: 10%;
+	font-size: 15px;
 	color: #fff;
-	background-color: red;
+	background-color: #373737;
+	border: 0.5px solid white;
+	padding-bottom: 20%;
+	margin-bottom: 10px;
 }
-
+.login button:hover{
+	background-color: #cc0000;
+}
 .contain .divine {
 	padding: 0 ;
 	margin: 0 3%;
-	border: 1px solid #fff;
+	border: 0.1px  #fff;
+}
+.text{
+	display: flex; 
+	margin-left: 5%;
+	 margin-right: 20%;
 }
 
-
+.circle {
+	clip-path: circle(50%);
+	width: fit-content;
+	height: fit-content;
+	margin-top: 8px;
+	cursor: pointer;
+  }
 // a queries
 
 @media only screen and (max-width: 990px){
-	.contain {
-		width: auto;
-
+	.contain .login {
+		max-width: 100%;
+		height: 100%;
+		display: flex;
+		margin-right: 15%;
+		margin-left: 10%;
+		place-items: right;
 	}
-	.contain .logo {
-		width: 3%;
-		margin-right: 2%;
+	.contain .navbar .search-form {
+		position: relative;
+		width: 50%;
+		height: 21px;
+		margin-left: 20%;
+		margin-right: 10%;
+	}
+	.contain .navbar a{
+		
+		margin: 0 5%;
+		
+	}
+	.text{
+		margin-right: 5%;
+
 	}
 }
 
 
 
 @media screen and (max-width:600px) {
-
+	.sidebar{
+		display: none;
+	}
+	.contain .logo {
+		margin-left: 0;
+	}
+	.contain .navbar a{
+		display: none;
+	}
+	.contain .navbar .search-form {
+		margin-left: 0px;
+	}
+	.contain .navbar{
+		padding: 0;
+	}
+	.contain .login {
+		position: static;
+		margin-left:15%;
+		max-width: 50%;
+	}
+	.login button {
+		height: 20%;
+		width: 30%;
+		font-size: 10px;
+		padding-bottom: 20%;
+		margin-bottom: 10px;
+		margin-top: 15%;
+		text-align: center;
+		
+	}
 }
