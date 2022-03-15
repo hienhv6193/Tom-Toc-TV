@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tom-toc-tv": {
+      "hosting": {
+        "client": [
+          "tom-toc-tv"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tom-toc-tv"
+  }
+}
