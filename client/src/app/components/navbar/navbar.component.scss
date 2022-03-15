@@ -130,12 +130,12 @@
 
 @media only screen and (max-width: 990px){
 	.contain .login {
-		position: relative;
 		max-width: 100%;
 		height: 100%;
 		display: flex;
 		margin-right: 15%;
 		margin-left: 10%;
+		place-items: right;
 	}
 	.contain .navbar .search-form {
 		position: relative;
@@ -168,14 +168,14 @@
 		display: none;
 	}
 	.contain .navbar .search-form {
-		margin-left: -60px;
+		margin-left: 0px;
 	}
 	.contain .navbar{
 		padding: 0;
 	}
 	.contain .login {
 		position: static;
-		margin-left: 20%;
+		margin-left:15%;
 		max-width: 50%;
 	}
 	.login button {
