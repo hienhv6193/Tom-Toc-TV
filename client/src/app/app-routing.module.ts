@@ -8,8 +8,10 @@ const routes: Routes = [
 { path: 'tranglivestream', loadChildren: () => import('./pages/tranglivestream/tranglivestream.module').then(m => m.TranglivestreamModule) },
 { path: 'gamegenre', loadChildren: () => import('./pages/gamegenre/gamegenre.module').then(m => m.GamegenreModule)},
 { path: 'createStream', loadChildren: () => import('./pages/create-stream/create-stream.module').then(m => m.CreateStreamModule) },
-
-{ path: 'livstream', loadChildren: () => import('./pages/livstream/livstream.module').then(m => m.LivstreamModule) },];
+{ path: 'infor-profile', loadChildren: () => import('./pages/infor-profile/infor-profile.module').then(m => m.InforProfileModule) },
+{ path: 'view-history', loadChildren: () => import('./pages/view-history/view-history.module').then(m => m.ViewHistoryModule) },
+{ path: 'my-follow', loadChildren: () => import('./pages/my-follow/my-follow.module').then(m => m.MyFollowModule) },
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
