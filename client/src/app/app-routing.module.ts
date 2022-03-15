@@ -9,7 +9,7 @@ const routes: Routes = [
 { path: 'gamegenre', loadChildren: () => import('./pages/gamegenre/gamegenre.module').then(m => m.GamegenreModule)},
 { path: 'createStream', loadChildren: () => import('./pages/create-stream/create-stream.module').then(m => m.CreateStreamModule) },
 
-{ path: 'livestream', loadChildren: () => import('./pages/livestream/livestream.module').then(m => m.LivestreamModule) }];
+{ path: 'livstream', loadChildren: () => import('./pages/livstream/livstream.module').then(m => m.LivstreamModule) },];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

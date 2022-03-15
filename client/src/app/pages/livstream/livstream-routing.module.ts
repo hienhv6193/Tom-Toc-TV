@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LivestreamComponent } from './livestream.component';
+import { LivstreamComponent } from './livstream.component';
 
-const routes: Routes = [{ path: '', component: LivestreamComponent }];
+const routes: Routes = [{ path: '', component: LivstreamComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LivestreamRoutingModule { }
+export class LivstreamRoutingModule { }

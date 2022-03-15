@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LivestreamComponent } from './livestream.component';
+import { LivstreamComponent } from './livstream.component';
 
-describe('LivestreamComponent', () => {
-  let component: LivestreamComponent;
-  let fixture: ComponentFixture<LivestreamComponent>;
+describe('LivstreamComponent', () => {
+  let component: LivstreamComponent;
+  let fixture: ComponentFixture<LivstreamComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LivestreamComponent ]
+      declarations: [ LivstreamComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LivestreamComponent);
+    fixture = TestBed.createComponent(LivstreamComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
