@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ForgotComponent } from '../forgot/forgot.component';
 import { SignupComponent } from '../signup/signup.component';
-import { Auth, authState, signInAnonymously, signOut, User, GoogleAuthProvider, signInWithPopup } from '@angular/fire/auth';
+
 import { getAuth, FacebookAuthProvider } from "firebase/auth";
+import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -12,21 +13,9 @@ import { getAuth, FacebookAuthProvider } from "firebase/auth";
 export class SigninComponent implements OnInit {
   hide=true;
   user:any
-  constructor(public dialog : MatDialog,public auth:Auth) {if(auth){
-    authState(this.auth).subscribe((temp:any)=>{
-       this.user=temp;
-    console.log(this.user)
-     }); 
+  constructor(public dialog : MatDialog,public auth:AuthService) {
     }
-
-    
-    }
-    public async login(){
-      return await signInWithPopup(this.auth,new GoogleAuthProvider())
-    }
-    public async loginF(){
-      return await signInWithPopup(this.auth,new FacebookAuthProvider())
-    }
+  
   ngOnInit(): void {
   }
   onCloseConfirm() {
