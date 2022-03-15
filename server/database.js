@@ -21,7 +21,7 @@ class Database{
         })
         return temp
     }
-    
+    // api lấy  thông tin cá nhân của người dùng
     async getItemid(){
       let temp;
       (await firestore.collection("UserInfo")
@@ -30,6 +30,6 @@ class Database{
         temp = data.data();
       })
       return temp;
-  }
+    }
 }
 module.exports=Database;
