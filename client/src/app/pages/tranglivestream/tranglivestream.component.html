@@ -1,11 +1,15 @@
-
-<div class="backround">
-    <div class="fullchat">
-        <div class="full">
-            <div class="flex1">
-
+<div class="background">
+    <div id="chat">
+        <div id="flex">
+            <div id="flex1">
                 <div id="avatar">
-                    <img src="https://gamek.mediacdn.vn/133514250583805952/2021/12/20/17939299-1631633830956-5a524af748005-1640018821731416772953.jpg"style="border-radius: 50%;">
+                    <img src="https://gamek.mediacdn.vn/133514250583805952/2021/12/20/17939299-1631633830956-5a524af748005-1640018821731416772953.jpg"
+                    style="border-radius: 50%; width: 60%;
+                    height: 80%;
+                    margin-top: 5%;
+                    margin-bottom: 8%;
+                    margin-left: 25%;
+                    border: 5px;">
                 </div>
 
                 <div id="title">
@@ -14,46 +18,148 @@
                         <p style="margin-top:2%;width:50%;">lượt xem:100.000.000</p>
 
                     </div>
-                        <p style="margin-top: 30px;width:50%;">Live thật bùng lổ</p>
+                        <p style="margin-top: 5%;width:50%;">Live thật bùng lổ</p> 
                 </div>
                 <div class="SumLike">
                     <div id="Like">
                         <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                        <h2>10k</h2>
+                        <p style="color: white;font-size: 20px;">10k</p>
                     </div>
                     <div id="DisLike">
                         <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-                        <h2>5k</h2>
+                        <p style="color: white;font-size: 20px;">5k</p>
+                    </div>   
+                </div>
+        
+                <div id="Sub">
+                    <div id="Follow">
+                        <button id="subcribe">Theo dõi</button>
+                        <i style="cursor: pointer;margin-left:9%;" class="fas fa-share"></i>
+                    </div>
+        
+                    <div id="text-follow">
+                        <h2 style="float: right;
+                        margin-right: 25%;
+                        margin-bottom: 3%;
+                        color: #FFFFFF;">Follower:200,000</h2>
                     </div>
                 </div>
-
-                    <div id="Sub">
-                        <div id="Follow">
-                            <button class="subcribe">
-                                <h1>Theo dõi</h1>
-                            </button>
-                            <i style="cursor: pointer;margin-left:8%;" class="fas fa-share"></i>
-                        </div>
-
-                        <div id="text-follow">
-                            <h2>Follower:200,000</h2>
-                        </div>
-                    </div>
             </div>
-            <div class="flex2">
+            <div id="flex2">
                 <video width="1100px" height="100%" controls></video>
             </div>
         </div>
-        <div class="chat">
-            <p style="margin-left: 40%;font-size: 250%;color: black;">Chat</p>
-            <div class="khungchat"></div>
-            <div class="typing">
-                <button id="nut">
-                    <img src="../../../assets/images/send.png" id="icon">
+        <div id="flex3">
+            <p style="margin-left: 40%;font-size: 250%;color: black;margin-top: 2%;"><b>Chat</b></p>
+            <div id="mess">
+                <cdk-virtual-scroll-viewport class="example-viewport" itemSize="60">
+                    <dl class="example-dl">
+                      <ng-container *cdkVirtualFor="let state of states">
+                        <dt class="example-dt">{{state.name}}</dt>
+                        <dd class="example-dd">{{state.capital}}</dd>
+                      </ng-container>
+                    </dl>
+                  </cdk-virtual-scroll-viewport>
+            </div>
+            <div id="message">
+                <mat-icon style="margin-top: 5%;">perm_identity</mat-icon>
+                <input type="text" id="text" placeholder="Bình luận...">
+                <button id="icon">
+                    <mat-icon>thumb_up</mat-icon>
                 </button>
-                <input style="margin-top: 15%;width:50%;font-size: 30px;"  type="text" value placeholder=""><br>
             </div>
         </div>
     </div>
-    <div class="flex3"></div>
+    <div id="gift">
+            <button id="donate">10.000</button>
+            <button id="donate">20.000</button>
+            <button id="donate">50.000</button>
+            <button id="donate">100.000</button>
+            <button id="donate">200.000</button>
+            <button id="donate">500.000</button>
+            <button id="donate">1.000.000</button>
+            <button id="donate">2.000.000</button>
+    </div>
+    <div id="fullallstream">
+        <div id="liststream1">
+            <div id="type1">
+                <img src="../../../assets/images/backmis.jpg">
+                <div id="stream1">
+                    <img style="width: 100%;border-radius: 100%"
+                    src="../../../assets/images/mis.png">
+                </div>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: -24%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">Misthy</p>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">Vào stream Misthy giải trí nào</p>
+                <div id="viewer">
+                    <img
+                    style="width: 8%;
+                    height: 20%;;margin-left: 65%;margin-top: 2%;"
+                    src="../../../assets/images/uesr-goup.png">
+                    <h2>150.000</h2>
+                </div>
+            </div>
+        </div>
+        <div id="liststream2">
+            <div id="type1">
+                <img src="../../../assets/images/backdo.png">
+                <div id="stream1">
+                    <img style="width: 100%;border-radius: 100%"
+                    src="../../../assets/images/do.png">
+                </div>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: -24%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">Mixi Gaming</p>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">From Mixi Gaming with love game</p>
+                <div id="viewer">
+                    <img
+                    style="width: 8%;
+                    height: 20%;;margin-left: 65%;margin-top: 2%;"
+                    src="../../../assets/images/uesr-goup.png">
+                    <h2>200.000</h2>
+                </div>
+            </div>
+        </div>
+        <div id="liststream3">
+            <div id="type1">
+                <img src="../../../assets/images/backrealer.png">
+                <div id="stream1">
+                    <img style="width: 100%;border-radius: 100%"
+                    src="https://img.nimo.tv/t/1599518330519/202111241637756239608_1599518330519_avatar.png/w120_l0/img.png">
+                </div>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: -24%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">Trực tiếp Game</p>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">Cùng vào chơi game giải trí nào</p>
+                <div id="viewer">
+                    <img
+                    style="width: 8%;
+                    height: 20%;;margin-left: 65%;margin-top: 2%;"
+                    src="../../../assets/images/uesr-goup.png">
+                    <h2>100.000</h2>
+                </div>
+            </div>
+        </div>
+        <div id="liststream4">
+            <div id="type1">
+                <img src="../../../assets/images/backqtv.png">
+                <div id="stream1">
+                    <img style="width: 100%;border-radius: 100%"
+                    src="../../../assets/images/qtv.png">
+                </div>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: -24%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">QTV</p>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">Cùng vào nghe nhạc nào</p>
+                <div id="viewer">
+                    <img
+                    style="width: 8%;
+                    height: 20%;;margin-left: 68%;margin-top: 2%;"
+                    src="../../../assets/images/uesr-goup.png">
+                    <h2>50.000</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
