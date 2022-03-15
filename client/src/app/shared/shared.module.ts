@@ -14,6 +14,7 @@ import { FontEditProfileComponent } from '../components/font-edit-profile/font-e
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSelectModule} from '@angular/material/select';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 @NgModule({
   declarations: [
   FooterComponent,
@@ -33,7 +34,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatDialogModule,
     MatDatepickerModule,
     MatSelectModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ScrollingModule
   ],
   exports: [
     FooterComponent,
@@ -52,7 +54,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatDatepickerModule,
     MatSelectModule,
     MatPaginatorModule,
-
+    ScrollingModule
   ]
 })
 export class SharedModule { }
