@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { SigninComponent } from '../signin/signin.component';
 import { SignupComponent } from '../signup/signup.component';
+import { Auth, authState, signInAnonymously, signOut, User, GoogleAuthProvider, signInWithPopup } from '@angular/fire/auth';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -10,8 +12,12 @@ import { SignupComponent } from '../signup/signup.component';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  user:any
+  constructor(public dialog : MatDialog,public auth:AuthService){
+   
 
-  constructor(public dialog : MatDialog) { }
+    
+    }
 
   ngOnInit(): void {
   }
@@ -21,4 +27,5 @@ export class NavbarComponent implements OnInit {
   open(){
     this.dialog.open(SignupComponent, { panelClass: 'custom-dialog-container' })
   }
+
 }
