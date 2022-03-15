@@ -28,14 +28,6 @@
     width:80% ;
     height:auto ;
 }
-img{
-    width: 60%;
-    height: 80%;
-    margin-top: 5%;
-    margin-bottom: 8%;
-    margin-left: 25%;
-    border: 5px;
-}
 p{
     font-size: 200%;
     color:white ;
@@ -48,7 +40,6 @@ p{
     display: flex;
     align-items: center;
 }
-
 .SumLike #Like{
     font-size: 200%;
     width: 42%;
@@ -85,7 +76,6 @@ p{
 }
 #subcribe:hover {
     cursor: pointer;
-    border-style: solid;
 }
 #subcribe h1 {
     font-size: 120%;
@@ -118,11 +108,9 @@ p{
     margin-top: 2%;
     margin-bottom: 2%;
     margin-left: 5%;
-    margin-right: -3%;
     background-color: #4A4444;
     color: #FFFFFF;
     border: 5px;
-    border: solid 3px;
 }
 #donate:hover{
     background-color: #2AABEE;
@@ -133,7 +121,19 @@ p{
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
-    background-color: #3D3636;
+}
+.example-viewport {
+    height: 100%;
+    width: 100%;
+    border: white;
+    background-color: white;
+}
+.example-dt {
+    height: 30px;
+    font-weight: bold;
+}
+.example-dd {
+    height: 30px;
 }
 #message{
     width: 80%;
@@ -144,17 +144,27 @@ p{
     border-radius: 15px;
     background-color: white;
 }
-#fullalltype{ 
+#icon{
+    width: 14%;
+    height: 60%;
+    float: right;
+    margin-top: 4%;
+    margin-right: 1%;
+    background-color: white;
+    color: black;
+    border: 5px;
+}
+#fullallstream{ 
     width: auto;
     height: auto;
     margin-top: 5%;
-    margin-left: 4%;
+    margin-left: 3%;
     display: flex;
     flex-wrap: wrap;
     grid-gap: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
-.type1{
+#type1{
     width: 300px;
     height: auto;
     margin-bottom: 50px;
@@ -163,16 +173,15 @@ p{
     flex-direction: column;
     background-color: #80808081;
 }
-.type1:hover{
+#type1:hover{
     background-color: #2AABEE;
     border-style: solid;
 }
 #stream1 {
     margin-top: 8%;
-    margin-left: 5%;
+    margin-left: 2%;
     margin-bottom: 2%;
-    background: #C4C4C4;
-    border-radius: 50%;
+    border-radius: 100%;
     height: 5em;
     width: 5em;
 }
@@ -183,6 +192,17 @@ p{
 h2{
     float: right;
     margin-right: 1%;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
     color: #FFFFFF;
+}
+#form{
+    width: auto;
+    height: auto;
+}
+#text{
+    margin-left: 5%;
+    width: 70%;
+    height: 70%;
+    border: solid 3px;
+    border-radius: 15px;
 }

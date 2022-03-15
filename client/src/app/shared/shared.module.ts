@@ -1,3 +1,4 @@
+import { NavbarComponent } from './../components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../components/footer/footer.component';
@@ -9,15 +10,20 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialogModule} from '@angular/material/dialog';
 import { SideBarComponent } from '../components/side-bar/side-bar.component';
 import { SibabarProfileComponent } from '../components/sibabar-profile/sibabar-profile.component';
-
+import { FontEditProfileComponent } from '../components/font-edit-profile/font-edit-profile.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 @NgModule({
   declarations: [
   FooterComponent,
-  SideBarComponent, 
+  SideBarComponent,
   SibabarProfileComponent,
+  FontEditProfileComponent,
+
 ],
   imports: [
-    
     MatDialogModule,
     CommonModule,
     MatFormFieldModule,
@@ -25,6 +31,11 @@ import { SibabarProfileComponent } from '../components/sibabar-profile/sibabar-p
     MatInputModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatPaginatorModule,
+    ScrollingModule
   ],
   exports: [
     FooterComponent,
@@ -34,7 +45,16 @@ import { SibabarProfileComponent } from '../components/sibabar-profile/sibabar-p
     MatIconModule,
     SideBarComponent,
     MatInputModule,
-    MatDialogModule
+    ReactiveFormsModule,
+    MatButtonModule,
+    SideBarComponent,
+    MatDialogModule,
+    SibabarProfileComponent,
+    FontEditProfileComponent,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatPaginatorModule,
+    ScrollingModule
   ]
 })
 export class SharedModule { }

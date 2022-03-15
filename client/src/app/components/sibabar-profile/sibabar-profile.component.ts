@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sibabar-profile',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sibabar-profile.component.scss']
 })
 export class SibabarProfileComponent implements OnInit {
-
-  constructor() { }
-
+  public temp="";
+  constructor(public router:Router) {
+   }
   ngOnInit(): void {
+
+  }
+  // check(path: string){
+    
+  // }
+  navigate(path: string){
+    this.temp=path;
+    this.router.navigateByUrl(path);
   }
 
 }

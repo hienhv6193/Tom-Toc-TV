@@ -1,4 +1,5 @@
 import { NavbarComponent } from './components/navbar/navbar.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -8,7 +9,6 @@ import { SharedModule } from './shared/shared.module';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ForgotComponent } from './components/forgot/forgot.component';
-
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { ForgotComponent } from './components/forgot/forgot.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

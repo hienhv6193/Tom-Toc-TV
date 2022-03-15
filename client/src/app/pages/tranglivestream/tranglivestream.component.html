@@ -2,20 +2,25 @@
     <div id="chat">
         <div id="flex">
             <div id="flex1">
-    
                 <div id="avatar">
-                    <img src="https://gamek.mediacdn.vn/133514250583805952/2021/12/20/17939299-1631633830956-5a524af748005-1640018821731416772953.jpg"style="border-radius: 50%;">
+                    <img src="https://gamek.mediacdn.vn/133514250583805952/2021/12/20/17939299-1631633830956-5a524af748005-1640018821731416772953.jpg"
+                    style="border-radius: 50%; width: 60%;
+                    height: 80%;
+                    margin-top: 5%;
+                    margin-bottom: 8%;
+                    margin-left: 25%;
+                    border: 5px;">
                 </div>
-        
+
                 <div id="title">
                     <div style="display: flex;">
                         <p style="margin-top:2%;width: 32%;">Monsieur Tuna</p>
                         <p style="margin-top:2%;width:50%;">lượt xem:100.000.000</p>
-        
+
                     </div>
                         <p style="margin-top: 5%;width:50%;">Live thật bùng lổ</p> 
                 </div>
-                <div class="SumLike">  
+                <div class="SumLike">
                     <div id="Like">
                         <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                         <p style="color: white;font-size: 20px;">10k</p>
@@ -33,7 +38,10 @@
                     </div>
         
                     <div id="text-follow">
-                        <h2>Follower:200,000</h2>
+                        <h2 style="float: right;
+                        margin-right: 25%;
+                        margin-bottom: 3%;
+                        color: #FFFFFF;">Follower:200,000</h2>
                     </div>
                 </div>
             </div>
@@ -43,8 +51,23 @@
         </div>
         <div id="flex3">
             <p style="margin-left: 40%;font-size: 250%;color: black;margin-top: 2%;"><b>Chat</b></p>
-            <div id="mess"></div>
-            <div id="message"></div>
+            <div id="mess">
+                <cdk-virtual-scroll-viewport class="example-viewport" itemSize="60">
+                    <dl class="example-dl">
+                      <ng-container *cdkVirtualFor="let state of states">
+                        <dt class="example-dt">{{state.name}}</dt>
+                        <dd class="example-dd">{{state.capital}}</dd>
+                      </ng-container>
+                    </dl>
+                  </cdk-virtual-scroll-viewport>
+            </div>
+            <div id="message">
+                <mat-icon style="margin-top: 5%;">perm_identity</mat-icon>
+                <input type="text" id="text" placeholder="Bình luận...">
+                <button id="icon">
+                    <mat-icon>thumb_up</mat-icon>
+                </button>
+            </div>
         </div>
     </div>
     <div id="gift">
@@ -55,165 +78,86 @@
             <button id="donate">200.000</button>
             <button id="donate">500.000</button>
             <button id="donate">1.000.000</button>
+            <button id="donate">2.000.000</button>
     </div>
-    <div id="fullalltype">
-        <div id="alltype">
-            <div class="type1">
-                <img src="../../../assets/images/type1.jpg">
+    <div id="fullallstream">
+        <div id="liststream1">
+            <div id="type1">
+                <img src="../../../assets/images/backmis.jpg">
                 <div id="stream1">
                     <img style="width: 100%;border-radius: 100%"
-                    src="https://img.nimo.tv/t/201907111562875240667_1629511896446_avatar.png/w120_l0/img.png">
+                    src="../../../assets/images/mis.png">
                 </div>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: -27%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">TUITÊNBO</p>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: -24%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">Misthy</p>
                 <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Stream nào</p>
+                overflow: hidden;text-overflow: ellipsis;">Vào stream Misthy giải trí nào</p>
                 <div id="viewer">
                     <img
                     style="width: 8%;
-                    height: 20%;;margin-left: 72%;margin-top: 2%;"
+                    height: 20%;;margin-left: 65%;margin-top: 2%;"
                     src="../../../assets/images/uesr-goup.png">
-                    <h2>4,137</h2>
+                    <h2>150.000</h2>
                 </div>
             </div>
         </div>
-        <div id="alltype2">
-            <div class="type1">
-                <img src="../../../assets/images/type2.jpg" [routerLink]="['/tranglivestream']">
+        <div id="liststream2">
+            <div id="type1">
+                <img src="../../../assets/images/backdo.png">
                 <div id="stream1">
-                    <img style="width: 100%;border-radius: 100%;"
-                    src="https://img.nimo.tv/t/1629528239156/202202181645188274186_1629528239156_avatar.png/w120_l0/img.png">
+                    <img style="width: 100%;border-radius: 100%"
+                    src="../../../assets/images/do.png">
                 </div>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: -26%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Thầy Sủi</p>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: -24%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">Mixi Gaming</p>
                 <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Stream nào</p>
+                overflow: hidden;text-overflow: ellipsis;">From Mixi Gaming with love game</p>
                 <div id="viewer">
                     <img
                     style="width: 8%;
-                    height: 20%;;margin-left: 78%;margin-top: 2%;"
+                    height: 20%;;margin-left: 65%;margin-top: 2%;"
                     src="../../../assets/images/uesr-goup.png">
-                    <h2>609</h2>
+                    <h2>200.000</h2>
                 </div>
             </div>
         </div>
-        <div id="alltyp3">
-            <div class="type1">
-                <img src="../../../assets/images/type3.jpg" [routerLink]="['/tranglivestream']">
+        <div id="liststream3">
+            <div id="type1">
+                <img src="../../../assets/images/backrealer.png">
                 <div id="stream1">
-                    <img style="width: 100%;border-radius: 100%;"
-                    src="https://img.nimo.tv/t/201907161563280672833_1899512513851_avatar.png/w120_l0/img.png">
-                </div>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: -26%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Mimosa chu</p>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Stream nào</p>
-                <div id="viewer">
-                    <img
-                    style="width: 8%;
-                    height: 20%;;margin-left: 78%;margin-top: 2%;"
-                    src="../../../assets/images/uesr-goup.png">
-                    <h2>237</h2>
-                </div>
-            </div>
-        </div>
-        <div id="alltype4">
-            <div class="type1">
-                <img src="../../../assets/images/type4.jpg" [routerLink]="['/tranglivestream']">
-                <div id="stream1">
-                    <img style="width: 100%;border-radius: 100%;"
+                    <img style="width: 100%;border-radius: 100%"
                     src="https://img.nimo.tv/t/1599518330519/202111241637756239608_1599518330519_avatar.png/w120_l0/img.png">
                 </div>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: -27%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Trực tiếp game</p>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: -24%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">Trực tiếp Game</p>
                 <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Xem nào</p>
+                overflow: hidden;text-overflow: ellipsis;">Cùng vào chơi game giải trí nào</p>
                 <div id="viewer">
                     <img
                     style="width: 8%;
-                    height: 20%;;margin-left: 86%;margin-top: 2%;"
+                    height: 20%;;margin-left: 65%;margin-top: 2%;"
                     src="../../../assets/images/uesr-goup.png">
-                    <h2>3</h2>
+                    <h2>100.000</h2>
                 </div>
             </div>
         </div>
-        <div id="alltype5">
-            <div class="type1">
-                <img src="../../../assets/images/type5.jpg" [routerLink]="['/tranglivestream']">
+        <div id="liststream4">
+            <div id="type1">
+                <img src="../../../assets/images/backqtv.png">
                 <div id="stream1">
-                    <img style="width: 100%;border-radius: 100%;"
-                    src="https://img.nimo.tv/t/1639518831803/202104271619503157063_1639518831803_avatar.png/w120_l0/img.png">
+                    <img style="width: 100%;border-radius: 100%"
+                    src="../../../assets/images/qtv.png">
                 </div>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: -27%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Trâu TV</p>
+                <p style="margin-left: 33%;font-size: 20px;margin-top: -24%;color: #FFFFFF;white-space: nowrap;
+                overflow: hidden;text-overflow: ellipsis;">QTV</p>
                 <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Stream nào</p>
+                overflow: hidden;text-overflow: ellipsis;">Cùng vào nghe nhạc nào</p>
                 <div id="viewer">
                     <img
                     style="width: 8%;
-                    height: 20%;;margin-left: 78%;margin-top: 2%;"
+                    height: 20%;;margin-left: 68%;margin-top: 2%;"
                     src="../../../assets/images/uesr-goup.png">
-                    <h2>443</h2>
-                </div>
-            </div>
-        </div>
-        <div id="alltype6">
-            <div class="type1">
-                <img src="../../../assets/images/type6.jpg" [routerLink]="['/tranglivestream']">
-                <div id="stream1">
-                    <img style="width: 100%;border-radius: 100%;"
-                    src=" https://img.nimo.tv/t/1599512832530/202109081631145363830_1599512832530_avatar.png/w120_l0/img.png">
-                </div>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: -27%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Trâm Bảnh</p>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Stream nào</p>
-                <div id="viewer">
-                    <img
-                    style="width: 8%;
-                    height: 20%;;margin-left: 82%;margin-top: 2%;"
-                    src="../../../assets/images/uesr-goup.png">
-                    <h2>90</h2>
-                </div>
-            </div>
-        </div>
-        <div id="alltype7">
-            <div class="type1">
-                <img src="../../../assets/images/type7.jpg" [routerLink]="['/tranglivestream']">
-                <div id="stream1">
-                    <img style="width: 100%;border-radius: 100%;"
-                    src="https://img.nimo.tv/t/1629527340188/202102261614377221302_1629527340188_avatar.png/w120_l0/img.png">
-                </div>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: -26%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Tuấn HC</p>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Live stream</p>
-                <div id="viewer">
-                    <img
-                    style="width: 8%;
-                    height: 20%;;margin-left: 82%;margin-top: 2%;"
-                    src="../../../assets/images/uesr-goup.png">
-                    <h2>50</h2>
-                </div>
-            </div>
-        </div>
-        <div id="alltype8">
-            <div class="type1">
-                <img src="../../../assets/images/type8.jpg" [routerLink]="['/tranglivestream']">
-                <div id="stream1">
-                    <img style="width: 100%;border-radius: 100%;"
-                    src=" https://img.nimo.tv/t/1639518832805/202104271619495952524_1639518832805_avatar.png/w120_l0/img.png">
-                </div>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: -27%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Feri</p>
-                <p style="margin-left: 33%;font-size: 20px;margin-top: 4%;color: #FFFFFF;white-space: nowrap;
-                overflow: hidden;text-overflow: ellipsis;">Helo</p>
-                <div id="viewer">
-                    <img
-                    style="width: 8%;
-                    height: 20%;;margin-left: 82%;margin-top: 2%;"
-                    src="../../../assets/images/uesr-goup.png">
-                    <h2>27</h2>
+                    <h2>50.000</h2>
                 </div>
             </div>
         </div>

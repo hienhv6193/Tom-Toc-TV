@@ -1,15 +1,21 @@
 <div class="container">
     <div class="avata">
         <div id="image">
-            <img src="../../../assets/images/avarta.jpg">
+            <img src="../../../assets/images/avarta.jpg" >
         </div>
         <p>Elometer</p>
     </div>
     <div class="fram">
         <div class="item" >
-            <a href="#" >Thông tin cá nhân </a>
-            <a href="#" >Theo dõi</a>
-            <a href="#" >Lịch sử xem</a>
+            <div  [ngStyle]="{'background': this.temp=='/infor-profile' ? 'green' : '#373737'}">
+                <a (click)="navigate('/infor-profile')" >Thông tin cá nhân </a>
+            </div>
+            <div  [ngStyle]="{'background': this.temp=='/my-follow' ? 'green' : '#373737'}">
+                <a  (click)="navigate('/my-follow')" >Theo dõi</a>
+            </div>
+            <div  [ngStyle]="{'background': this.temp=='/view-history' ? 'green' : '#373737'}">      
+                <a  (click)="navigate('/view-history')" >Lịch sử xem</a>
+            </div> 
         </div>
     </div>
 </div>
