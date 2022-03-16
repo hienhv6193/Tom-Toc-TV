@@ -1,12 +1,14 @@
+import { ActivatedRoute } from '@angular/router';
+import { Stream } from './../../models/stream.model';
+import { StreamService } from 'src/app/services/stream.service';
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-tranglivestream',
   templateUrl: './tranglivestream.component.html',
   styleUrls: ['./tranglivestream.component.scss']
 })
 export class TranglivestreamComponent implements OnInit {
-
+  public streamId:any;
   states = [
     {name: 'Alabama', capital: 'asaaaaaasasasaqweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeesasasasasasasaasssssssssssssssssssdasdasdsadsasasasasasasasasasasasasasadddddddddddddddddddddddddddddddddddaaaa'},
     {name: 'Alaska', capital: 'Junea asda d asdas das sad asda s das das das dasdasdasdasdasd asdasd asdasd asu'},
@@ -26,9 +28,15 @@ export class TranglivestreamComponent implements OnInit {
     {name: 'Kansas', capital: 'Topeka'},
     {name: 'Kentucky', capital: 'Frankfort'},
   ];
-  constructor() { }
+  constructor(public stream:StreamService,public AcRoute:ActivatedRoute) {
+
+   }
 
   ngOnInit(): void {
+    this.AcRoute.paramMap.subscribe((params) => {
+      this.streamId=params.get('id');
+    })
+    this.stream.getStream(this.streamId)
   }
 
 }

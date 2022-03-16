@@ -18,16 +18,16 @@
                         <p style="margin-top:2%;width:50%;">lượt xem:100.000.000</p>
 
                     </div>
-                        <p style="margin-top: 5%;width:50%;">Live thật bùng lổ</p>
+                        <p style="margin-top: 5%;width:50%;">{{this.stream.streamInfo.Name}}</p>
                 </div>
                 <div class="SumLike">
                     <div id="Like">
                         <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                        <p style="color: white;font-size: 20px;">10k</p>
+                        <p style="color: white;font-size: 20px;">{{this.stream.streamInfo.Likes.length}}</p>
                     </div>
                     <div id="DisLike">
                         <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-                        <p style="color: white;font-size: 20px;">5k</p>
+                        <p style="color: white;font-size: 20px;">{{this.stream.streamInfo.DisLikes.length}}</p>
                     </div>
                 </div>
 
@@ -54,10 +54,10 @@
             <div id="mess">
                 <cdk-virtual-scroll-viewport class="example-viewport" itemSize="20" >
                     <dl class="example-dl">
-                      <ng-container *cdkVirtualFor="let state of states" >
+                      <ng-container *cdkVirtualFor="let chat of this.stream.streamInfo.Messages" >
                         <div style="height: fit-content;">
-                          <dt class="example-dt" >{{state.name}}</dt>
-                          <dd class="example-dd">{{state.capital}}</dd>
+                          <dt class="example-dt" >{{chat.UserId}}</dt>
+                          <dd class="example-dd">{{chat.mess}}</dd>
                         </div>
 
                       </ng-container>

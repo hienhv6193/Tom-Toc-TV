@@ -1,14 +1,36 @@
+
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { Firestore, collection, collectionData, getDoc, doc, query } from '@angular/fire/firestore';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { Stream } from '../models/stream.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StreamService {
+  public streamInfo: any = new Stream();
+  public streamList!: Array<Stream>
+  constructor(public router: Router, public fs: Firestore, public AcRoute: ActivatedRoute) {
+  }
 
-  constructor(public router:Router) { }
-
-  createStream(){
-      this.router.navigate([`/tranglivestream`])
+  createStream() {
+    this.router.navigate([`/tranglivestream`])
+  }
+  getStreamsData() {
+    let docRef = collection(this.fs, 'Streams');
+    collectionData(docRef, { idField: 'idDoc' }).subscribe((data) => {
+      this.streamList = data;
+    })
+  }
+  getStream(Id: any) {
+    let docRef = collection(this.fs, 'Streams');
+    collectionData(docRef, { idField: 'idDoc' }).subscribe((data) => {
+      data.forEach(doc => {
+        if (doc['idDoc'] == Id) {
+          this.streamInfo = doc;
+        }
+      })
+    })
   }
 }
