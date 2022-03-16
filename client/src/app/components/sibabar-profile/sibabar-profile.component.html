@@ -8,16 +8,16 @@
     <div class="fram">
         <div class="item" >
             <div  [ngStyle]="{'background': this.temp=='/infor-profile' ? 'green' : '#373737'}">
-                <i> <mat-icon>person</mat-icon></i>
-                <a (click)="navigate('/infor-profile')" >Thông tin cá nhân </a>
+               
+                <a (click)="navigate('/infor-profile')" > <mat-icon style="margin-right:9%;">person</mat-icon>Thông tin cá nhân </a>
             </div>
             <div  [ngStyle]="{'background': this.temp=='/my-follow' ? 'green' : '#373737'}">
-                <i> <mat-icon>person_add</mat-icon></i>
-                <a  (click)="navigate('/my-follow')" >Theo dõi</a>
+               
+                <a  (click)="navigate('/my-follow')" > <mat-icon style="margin-right:9%;">person_add</mat-icon>Theo dõi</a>
             </div>
             <div  [ngStyle]="{'background': this.temp=='/view-history' ? 'green' : '#373737'}">
-                <i>	<mat-icon>av_timer</mat-icon></i>      
-                <a  (click)="navigate('/view-history')" >Lịch sử xem</a>
+                	     
+                <a  (click)="navigate('/view-history')" ><mat-icon style="margin-right:9%;"  >av_timer</mat-icon> Lịch sử xem</a>
             </div> 
         </div>
     </div>
