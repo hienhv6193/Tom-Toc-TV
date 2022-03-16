@@ -28,17 +28,17 @@
 	
 	<!--icon chưa đăng nhập -->
 	<div class="login">
-		<button mat-button  (click)="open()" *ngIf="!user" >Sign up</button>
+		<button mat-button  (click)="open()" *ngIf="!this.auth.user" >Sign up</button>
 		<div class="divine"></div>
-		<button mat-button (click)="openDialog()"*ngIf="!user" >Sign in</button>
-		<div class="circle" *ngIf="user" [routerLink]="['/infor-profile']">
-			<img  [src]="user.photoURL" >
+		<button mat-button (click)="openDialog()"*ngIf="!this.auth.user" >Sign in</button>
+		<div class="circle" *ngIf="this.auth.user" [routerLink]="['/infor-profile']">
+			<img  [src]="this.auth.user.photoURL" >
 		</div>
-		<div class="w3-dropdown-hover"*ngIf="user">
+		<div class="w3-dropdown-hover"*ngIf="this.auth.user">
 			<mat-icon style="margin: 50% 5px 0 20px;color: white;">keyboard_arrow_down</mat-icon>
 			<div class="w3-dropdown-content w3-bar-block w3-border" >
 			  <a  class="w3-bar-item w3-button" style="display: flex;"><mat-icon>settings</mat-icon>Setting</a>
-			  <a (click)="logout()" class="w3-bar-item w3-button" style="display: flex;"><mat-icon>forward</mat-icon>Signout</a>
+			  <a (click)="this.auth.logout()" class="w3-bar-item w3-button" style="display: flex;"><mat-icon>forward</mat-icon>Signout</a>
 			  
 			</div>
 		  </div>
