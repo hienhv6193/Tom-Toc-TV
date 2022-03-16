@@ -13,7 +13,9 @@ export const environment = {
     messagingSenderId: '989177736207',
     measurementId: 'G-3KPG8FYQD7',
   },
-  production: false
+  production: false,
+  rtmpConnectionString:"http://192.168.1.8",
+  nodejsConfig:"http://localhost:3000"
 };
 
 /*

@@ -1,24 +1,15 @@
-const express=require('express');
-const app=express();
-const body=require('body-parser');
-const cors=require('cors');
+const express = require('express');
+const app = express();
+const body = require('body-parser');
+const cors = require('cors');
 
-const admin = require("firebase-admin");
-var serviceAccount = require("./keys/key.json");
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
-const firestore = admin.firestore();
 app.use(body.urlencoded({ extended: false }));
-// const Database=require('./database');
-// const db= new Database();
+const Database = require('./database');
+const db = new Database();
 app.use(body.json());
 app.use(cors());
 
-app.get('/Users',async (req,res)=>{
-        let result=await db.addItem();
-        res.send(result)
-})
+
 
 //API chỉnh sửa thông tin người dùng theo UserID
 // app.get("/editUserInfo", async function (request, response) {
@@ -90,20 +81,36 @@ app.get('/Users',async (req,res)=>{
 // });
 
 // API tạo stream. Sau khi tạo cập nhật biến IsStreaming=true của người dùng có Id trùng với hostID
-// app.post("/createStream", async (req, res) => {
-//   try{
-//   let body = req.body;
-//   let temp=await firestore.collection("Streams").add(body.data);
-//   let string=temp.id;
-//   let checkUser= await firestore.collection("Streams").doc(string).get();
-//   let StreamID=checkUser.data().HostID;
-//   let findUser = await firestore.collection("Users").doc(StreamID)
-//   .update({"isStreaming":true})
-//   res.send("tạo stream thành công");
-// }catch(error){
-//     res.send(error.toString());}
-// });
+app.post("/createStream", async (req, res) => {
+  try {
+    let body = req.body;
+    await db.createStream(body.data)
+    res.send("tạo stream thành công");
+  } catch (error) {
+    res.send(error.toString());
+  }
+});
 
+app.delete("/endStream", async (req, res) => {
+  try {
+    let body = req.body;
+    await db.endStream(body.data)
+    res.send("Tắt stream thành công");
+  } catch (error) {
+    res.send(error.toString());
+  }
+});
+
+app.post("/addChat", async (req, res) => {
+  try {
+    let body = req.body;
+    let result =await db.addChat(body.data);
+    res.send("Chat thành công");
+  }catch(err){
+    res.send(error.toString());
+  }
+
+})
 // API tắt stream. Xóa document , cập nhật biên IsStreaming=false của người dùng có Id trùng với hostID
 // app.delete("/deleteStream", async (req, res) => {
 //   try{
@@ -138,7 +145,7 @@ app.get('/Users',async (req,res)=>{
 //            }) 
 //        })
 //       });
-  
+
 //     await firestore.collection("UserInfo")
 //     .where('UserId', '==', body.userIdSubcriber).get()
 //     .then(value => {
@@ -206,11 +213,11 @@ app.get('/Users',async (req,res)=>{
 //                     DisLikes: admin.firestore.FieldValue.arrayRemove(body.userIdDisLike)})
 //                   await firestore.collection("Streams").doc(element.id).update({
 //                     Likes: admin.firestore.FieldValue.arrayUnion(body.userIdDisLike)})
-                  // res.send({message:"like"});
+// res.send({message:"like"});
 //                   }
-              // else{
-              //     res.send({message:"đã like"});
-              // }
+// else{
+//     res.send({message:"đã like"});
+// }
 //              })   
 //          })
 //         });
@@ -246,15 +253,16 @@ app.get('/Users',async (req,res)=>{
 
 // API thêm danh mục
 app.post("/addElementCategorie", async (req, res) => {
-  try{
-    let body=req.body
+  try {
+    let body = req.body
     await firestore.collection("Categories").doc(body.docId).update(body.data);
-    res.send({message:"thêm thành công"}); 
-}catch(error){
-    res.send(error.toString());}
+    res.send({ message: "thêm thành công" });
+  } catch (error) {
+    res.send(error.toString());
+  }
 });
 
 //API thêm thành phần trong danh mục
-app.listen(3000,"0.0.0.0",()=>{
-    console.log("Server is running on http://127.0.0.1:3000/")
+app.listen(3000, "0.0.0.0", () => {
+  console.log("Server is running on http://127.0.0.1:3000/")
 });
