@@ -1,0 +1,166 @@
+.backround{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    padding: 8% 0 0 0;
+}
+
+.flex1{
+    background-color: rgb(99, 95, 95);
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+#avatar{
+    width:20% ;
+    height:auto;
+}
+#title{
+    width:100% ;
+    height:auto ;
+    font-size: 120%;
+}
+.flex2{
+    // height: auto;
+    width: 100%;
+    height: 83.8%;
+    padding: 0;
+
+
+}
+.flex3{
+    background-color: rgb(34, 114, 51);
+    height: 15%;
+    width: 100%;
+}
+img{
+    width: 60%;
+    height: 85%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    margin-left: 30%;
+    border: 5px;
+}
+p{
+    font-size: 150%;
+    color:white ;
+    // margin-right: 20%;
+     margin-top: 6%;
+    margin-left: 5%;
+    width: 50%;
+ }
+
+.SumLike{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SumLike #Like{
+    font-size: 200%;
+    width: 42%;
+    height: 60%;
+}
+.SumLike #Like i{
+    font-size: 38px;
+    color: white ;
+}
+.SumLike #Like h2{
+    
+    color: white;
+}
+.SumLike #DisLike{
+    margin-top: 5%;
+    font-size: 200%;
+    width: 450%;
+    height: 60%;
+    margin-left: 20%;
+}
+    
+#DisLike i{
+    font-size: 38px;
+    color:white;
+    margin-left: 10%;
+}
+#DisLike h2{
+    color: white;
+}
+#Sub{
+    font-size:200% ;
+    margin-top:1%;
+    width: 30%;
+    margin-left: 3%;
+}
+
+.subcribe {
+    background-color: #4B11A9;
+    margin: 1% 4%;
+    height: 10%;
+    border-radius: 15px;
+    width: 52%;
+    outline: auto;
+    outline-style: round;
+    margin-left: 8%;
+    background-color: green;
+}
+
+.subcribe:hover {
+    cursor: pointer;
+
+}
+.subcribe h1 {
+    color: white;
+    margin: 0 auto;
+    font-size: 120%;
+    text-align: center;
+}
+
+
+#text-follow {
+    color: white;
+}
+.chat{
+    width: 50%;
+    height: auto;
+    background-color:rgb(194, 187, 187);
+    border-radius: 15px;
+    margin-left: 0.5%;
+}
+.full{
+    height: auto;
+    width: 74.5%;
+}
+.fullchat{
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+.khungchat{
+    width: 90%;
+    height: 73%;
+    background-color: rgb(63, 62, 62);
+    border-radius: 15px;
+    margin-left: 5%;
+}
+.typing{
+    width: 90%;
+    margin-left: 5%;
+    height: 8%;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 6%;
+}
+#nut{
+    width: 25%;
+    height: 25%;
+    background-color: black;
+    color: #FFFFFF;
+    border: 5px;
+}
+#icon{
+    width: 25%;
+    height: 25%;
+    border: 5px;
+}

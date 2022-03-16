@@ -2,7 +2,6 @@
     height: 100%;
     width: 100%;
     background: #373737;
-    margin-top: 20%;
 }
 .container .avata{
     height: 30%;
@@ -64,8 +63,14 @@
     height: 13%;
     width: 100%;
     padding: 2%;
+    display: flex;
     // background-color: rgb(228, 142, 29);
 
+}
+.item div i{
+    height: 100%;
+    width:5%;
+    margin-top: 5%; 
 }
 .item div a{
     height: 100%;
