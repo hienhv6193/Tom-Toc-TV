@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TranglivestreamComponent implements OnInit {
 
   states = [
-    {name: 'Alabama', capital: 'Montgojkhjkjkjkjkkjkjkjkjkjkjkjkccvxbxfbvxcbcxxcxcxcvxvbbmery'},
+    {name: 'Alabama', capital: 'Montgo jkhjkjkjkjkkjkjkj kjkjkjkjkccvxbx fbvxcbcxxcxccvxvsw wsadasdsaasdsdasa ssdasdfsadfsdafsdfsdwersfsfsdssdf asdasbbmery'},
     {name: 'Alaska', capital: 'Juneau'},
     {name: 'Arizona', capital: 'Phoenix'},
     {name: 'Arkansas', capital: 'Little Rock'},

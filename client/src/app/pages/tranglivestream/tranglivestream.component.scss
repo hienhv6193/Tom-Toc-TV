@@ -130,12 +130,12 @@ p{
     border-radius: 15px;
 }
 .example-dt {
-    height: 30px;
+    height: auto;
     font-weight: bold;
     margin-left: 5%;
 }
 .example-dd {
-    height: 30px;
+    height: auto;
 }
 #message{
     width: 80%;
@@ -213,6 +213,6 @@ h2{
     width: 100%;
     height: auto;
     border: solid 3px;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-top: 3%;
 }
