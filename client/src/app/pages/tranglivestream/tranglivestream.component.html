@@ -18,7 +18,7 @@
                         <p style="margin-top:2%;width:50%;">lượt xem:100.000.000</p>
 
                     </div>
-                        <p style="margin-top: 5%;width:50%;">Live thật bùng lổ</p> 
+                        <p style="margin-top: 5%;width:50%;">Live thật bùng lổ</p>
                 </div>
                 <div class="SumLike">
                     <div id="Like">
@@ -28,15 +28,15 @@
                     <div id="DisLike">
                         <i class="fa fa-thumbs-down" aria-hidden="true"></i>
                         <p style="color: white;font-size: 20px;">5k</p>
-                    </div>   
+                    </div>
                 </div>
-        
+
                 <div id="Sub">
                     <div id="Follow">
                         <button id="subcribe">Theo dõi</button>
                         <i style="cursor: pointer;margin-left:9%;" class="fas fa-share"></i>
                     </div>
-        
+
                     <div id="text-follow">
                         <h2 style="float: right;
                         margin-right: 25%;
@@ -52,11 +52,14 @@
         <div id="flex3">
             <p style="margin-left: 40%;font-size: 250%;color: black;margin-top: 2%;"><b>Chat</b></p>
             <div id="mess">
-                <cdk-virtual-scroll-viewport class="example-viewport" itemSize="20">
+                <cdk-virtual-scroll-viewport class="example-viewport" itemSize="20" >
                     <dl class="example-dl">
-                      <ng-container *cdkVirtualFor="let state of states">
-                        <dt class="example-dt">{{state.name}}</dt>
-                        <dd class="example-dd">{{state.capital}}</dd>
+                      <ng-container *cdkVirtualFor="let state of states" >
+                        <div style="height: fit-content;">
+                          <dt class="example-dt" >{{state.name}}</dt>
+                          <dd class="example-dd">{{state.capital}}</dd>
+                        </div>
+
                       </ng-container>
                     </dl>
                   </cdk-virtual-scroll-viewport>
@@ -73,9 +76,9 @@
                     <input  id="text" type="text" placeholder="Bình luận...">
                 </div>
                     <button id="icon">
-                        <mat-icon>send</mat-icon>
+                        <mat-icon class="sendIcon">send</mat-icon>
                     </button>
-              
+
             </div>
         </div>
     </div>
