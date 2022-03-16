@@ -38,7 +38,7 @@
 			<mat-icon style="margin: 50% 5px 0 20px;color: white;">keyboard_arrow_down</mat-icon>
 			<div class="w3-dropdown-content w3-bar-block w3-border" >
 			  <a  class="w3-bar-item w3-button" style="display: flex;"><mat-icon>settings</mat-icon>Setting</a>
-			  <a (click)="this.auth.logout()" class="w3-bar-item w3-button" style="display: flex;"><mat-icon>forward</mat-icon>Signout</a>
+			  <a [routerLink]="['']" (click)="this.auth.logout()" class="w3-bar-item w3-button" style="display: flex;"><mat-icon>forward</mat-icon>Signout</a>
 			  
 			</div>
 		  </div>

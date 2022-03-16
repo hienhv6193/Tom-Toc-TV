@@ -17,6 +17,14 @@
             <i [routerLink]="['/']" class="fa fa-times fa-2x" aria-hidden="true"
                 style="cursor: pointer;margin-top: -30px;"></i>
         </div>
+        <div style="margin-top: 2%;">
+        <label for="Category">Category: </label>
+        <select style="background-color:rgb(70, 67, 67) ;border: none;color: white;" id="Category ">
+            <option value="volvo">LOL</option>
+            <option value="saab">PUBG</option>
+            <option value="vw">GTA</option>
+        </select>
+        </div>
         <form [formGroup]="createStreamForm" (submit)="submitCreateStream()">
             <div class="detail" style="margin-top: 5%;">
 
