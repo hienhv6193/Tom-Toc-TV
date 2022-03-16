@@ -4,7 +4,7 @@ import { Auth, authState, signInAnonymously, signOut, User, GoogleAuthProvider, 
   providedIn: 'root'
 })
 export class AuthService {
-  public user:any
+  public user:any;
   constructor(public auth:Auth) {
     if(auth){
       authState(this.auth).subscribe((temp:any)=>{
