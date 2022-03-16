@@ -17,7 +17,7 @@ export class TypeService {
     })
     
   }
-  updateDoc(){
-    updateDoc(doc(this.firestore,'Categories','2PBDxS9SNetS4oU8befz'),{categoryList:[{Name:'Liên minh',PictureURL:"hehe"}]});
-  }
+  // updateDoc(){
+  //   updateDoc(doc(this.firestore,'Categories','2PBDxS9SNetS4oU8befz'),{categoryList:[{Name:'Liên minh',PictureURL:"hehe"}]});
+  // }
 }
