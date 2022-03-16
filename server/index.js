@@ -84,8 +84,9 @@ app.use(cors());
 app.post("/createStream", async (req, res) => {
   try {
     let body = req.body;
-    await db.createStream(body.data)
-    res.send("tạo stream thành công");
+    let result=await db.createStream(body.data);
+
+    res.send(result);
   } catch (error) {
     res.send(error.toString());
   }

@@ -15,7 +15,7 @@ export const environment = {
   },
   production: false,
   rtmpConnectionString:"http://192.168.1.8",
-  nodejsConfig:"http://localhost:3000"
+  nodejsConfig:"http://localhost:3000/"
 };
 
 /*

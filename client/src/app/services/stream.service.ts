@@ -1,4 +1,5 @@
 
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Firestore, collection, collectionData, getDoc, doc, query } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,14 +13,30 @@ import { Stream } from '../models/stream.model';
 export class StreamService {
   public streamInfo: any = new Stream();
   public streamList!: Array<Stream>
-  public streamLink:any;
-  constructor(public router: Router, public fs: Firestore, public AcRoute: ActivatedRoute) {
+  public streamLink: any;
+  constructor(public router: Router, public fs: Firestore, public AcRoute: ActivatedRoute, public http: HttpClient) {
 
   }
 
 
-  createStream() {
-    this.router.navigate([`/tranglivestream`])
+  async createStream(Name: any, Description: any, StreamKey: any, UserId: any) {
+    await this.http.post(`${environment.nodejsConfig}createStream`, {
+      data: {
+        CategoryId: "2",
+        Description: Description,
+        DisLikes: [],
+        Likes: [],
+        Messages: [{}],
+        Name: Name,
+        StreamKey: StreamKey,
+        HostId: UserId,
+
+      }
+    }).subscribe(async (data) => {
+      alert(await data)
+      // let idroom=await data;
+      // this.router.navigate([`stream/${idroom}`])
+    })
   }
   getStreamsData() {
     let docRef = collection(this.fs, 'Streams');

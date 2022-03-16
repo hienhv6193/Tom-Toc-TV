@@ -14,16 +14,22 @@ class Database {
 
   /// Tạo stream
   async createStream(data) {
+    let temp;
     try {
-      let temp = await firestore.collection("Streams").add(data);
+     temp = await firestore.collection("Streams").add(data).then((data)=>{
+       return data.id;
+     });
+  
       let string = temp.id;
       let checkUser = await firestore.collection("Streams").doc(string).get();
       let StreamID = checkUser.data().HostId;
       await firestore.collection("Users").doc(StreamID).update({ "isStreaming": true });
+      return temp;
+     
     } catch (err) {
 
     }
-
+   
   }
   //Xóa stream
   async endStream(bodydata) {
@@ -41,7 +47,7 @@ class Database {
   async addChat(data) {
     try {
       await firestore.collection("Streams").doc(data.streamId).update({
-        Messages:admin.firestore.FieldValue.arrayUnion({UserId:data.UserId,mess:data.message})
+        Messages: admin.firestore.FieldValue.arrayUnion({ UserId: data.UserId, mess: data.message })
       })
     } catch (err) {
       console.log(err);
