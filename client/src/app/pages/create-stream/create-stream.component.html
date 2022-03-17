@@ -20,9 +20,9 @@
         <div style="margin-top: 2%">
             <mat-form-field appearance="fill" >
                 <mat-label style="color: white;"> Danh mục</mat-label>
-                <mat-select [formControl]="animalControl" required  >
+                <mat-select style="color: aqua;" [formControl]="animalControl" required  >
                   <mat-option>--</mat-option>
-                  <mat-option  *ngFor="let category of categories" [value]="category.categoryId">
+                  <mat-option *ngFor="let category of categories" [value]="category.categoryId">
                     {{category.name}}
                   </mat-option>
                   
@@ -37,7 +37,7 @@
                 <div id="tittle">
                     <mat-form-field appearance="outline">
                         <mat-label>Tiêu đề (bắt buộc)</mat-label>
-                        <input style="background-color:rgb(70, 67, 67);color: black; " required matInput
+                        <input style="background-color:rgb(70, 67, 67);color: white; " required matInput
                             placeholder="Thêm tiêu đề miêu tả sự kiện trực tiếp" formControlName="Name">
                     </mat-form-field>
                 </div>
