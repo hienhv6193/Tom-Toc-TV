@@ -55,7 +55,7 @@ p{
     width: 450%;
     height: 60%;
     margin-left: 17%;
-}  
+}
 #DisLike i{
     font-size: 38px;
     color:white;
@@ -129,14 +129,19 @@ p{
     background-color: white;
     border-radius: 15px;
 }
+
 .example-dt {
-    height: 30px;
+    height: fit-content;
     font-weight: bold;
-    margin-left: 5%;
+    margin:1% 0 0 2% ;
 }
 .example-dd {
-    height: 30px;
+    height: fit-content;
+    margin-left: 2%;
+    width: 90%;
+    word-break: break-word;
 }
+
 #message{
     width: 80%;
     height: auto;
@@ -167,7 +172,7 @@ p{
     border: 5px;
     float: right;
 }
-#fullallstream{ 
+#fullallstream{
     width: auto;
     height: auto;
     margin-top: 5%;
@@ -211,8 +216,13 @@ h2{
 
 #text{
     width: 100%;
-    height: auto;
+    height: 100%;
     border: solid 3px;
-    border-radius: 15px;
-    margin-top: 3%;
+    border-radius: 10px;
+}
+mat-icon{
+  transition: 500ms;
+}
+mat-icon:hover{
+  color: red;
 }

@@ -1,34 +1,40 @@
+import { environment } from './../../../environments/environment';
+import { ActivatedRoute } from '@angular/router';
+import { Stream } from './../../models/stream.model';
+import { StreamService } from 'src/app/services/stream.service';
 import { Component, OnInit } from '@angular/core';
-
+import HLS from 'hls.js';
 @Component({
   selector: 'app-tranglivestream',
   templateUrl: './tranglivestream.component.html',
   styleUrls: ['./tranglivestream.component.scss']
 })
 export class TranglivestreamComponent implements OnInit {
+  public streamId: any;
 
-  states = [
-    {name: 'Alabama', capital: 'Montgojkhjkjkjkjkkjkjkjkjkjkjkjkccvxbxfbvxcbcxxcxcxcvxvbbmery'},
-    {name: 'Alaska', capital: 'Juneau'},
-    {name: 'Arizona', capital: 'Phoenix'},
-    {name: 'Arkansas', capital: 'Little Rock'},
-    {name: 'California', capital: 'Sacramento'},
-    {name: 'Colorado', capital: 'Denver'},
-    {name: 'Connecticut', capital: 'Hartford'},
-    {name: 'Delaware', capital: 'Dover'},
-    {name: 'Florida', capital: 'Tallahassee'},
-    {name: 'Georgia', capital: 'Atlanta'},
-    {name: 'Hawaii', capital: 'Honolulu'},
-    {name: 'Idaho', capital: 'Boise'},
-    {name: 'Illinois', capital: 'Springfield'},
-    {name: 'Indiana', capital: 'Indianapolis'},
-    {name: 'Iowa', capital: 'Des Moines'},
-    {name: 'Kansas', capital: 'Topeka'},
-    {name: 'Kentucky', capital: 'Frankfort'},
-  ];
-  constructor() { }
+  constructor(public stream: StreamService, public AcRoute: ActivatedRoute) {
+    this.AcRoute.paramMap.subscribe((params) => {
+      this.streamId = params.get('id');
+      this.stream.getStream(this.streamId)
+    })
+
+  }
 
   ngOnInit(): void {
+    this.getStreamInfo()
   }
+  async getStreamInfo() {
+    var video = <HTMLVideoElement>document.getElementById('video');
+    setTimeout(() => {
+      var hls = new HLS();
+      hls.loadSource(this.stream.streamLink);
+      hls.attachMedia(video);
+
+    }, 3000)
+
+
+
+  }
+
 
 }
