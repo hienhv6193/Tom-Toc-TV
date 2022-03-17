@@ -57,6 +57,7 @@
                         <ng-container *cdkVirtualFor="let chat of this.stream.streamInfo.Messages">
                             <div style="height: fit-content;">
                                 <dt class="example-dt" *ngIf="this.stream.streamInfo.HostId==this.auth.user.uid && chat.UserId==this.auth.user.uid" style="color:red">You</dt>
+                                <dt class="example-dt" *ngIf="chat.UserId==this.stream.streamInfo.HostId" style="color:red">{{this.chat.UserId}}</dt>
                                 <dt class="example-dt" *ngIf="this.stream.streamInfo.HostId!=this.auth.user.uid && chat.UserId==this.auth.user.uid" style="color:blue">You</dt>
                                 <dt class="example-dt" *ngIf="this.stream.streamInfo.HostId!=this.auth.user.uid && chat.UserId!=this.auth.user.uid" style="color:blue">{{chat.UserId}}</dt>
                                 <dd class="example-dd">{{chat.mess}}</dd>
