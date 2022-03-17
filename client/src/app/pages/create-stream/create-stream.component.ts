@@ -19,6 +19,8 @@ export interface Category{
   styleUrls: ['./create-stream.component.scss'],
 })
 export class CreateStreamComponent implements OnInit {
+  animalControl = new FormControl('', Validators.required);
+  selectFormControl = new FormControl('', Validators.required);
   categories: Category[] = [
     {categoryId: 1, name: 'GAME'},
     {categoryId: 2, name: 'TALKSHOW'},
@@ -38,7 +40,6 @@ export class CreateStreamComponent implements OnInit {
   ngOnInit(): void {}
   genKey() {
     this.createStreamForm.controls['StreamKey'].patchValue(uuidv4());
-
   }
   submitCreateStream() {
     let form = this.createStreamForm;

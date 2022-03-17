@@ -34,10 +34,12 @@
 
 
 .contain .navbar a{
-	display: flex;
+	width: 150px;
+	text-align: center;
+	display: inline-flex;
 	text-decoration: none;
-	margin: 0 15%;
-	font-size: 20px;
+	margin: 0 2%;
+	font-size: 15px;
 	color: #fff;
 }
 
@@ -45,7 +47,6 @@
 
 .contain .navbar a:hover {
 	color: #cc0000;
-	border-bottom: .1rem solid #cc0000;
 }
 
 
@@ -100,9 +101,9 @@
 	margin-top: 10%;
 	font-size: 15px;
 	color: #fff;
-	background-color: #373737;
-	border: 0.5px solid white;
+	background-color: #cc0000;
 	padding-bottom: 20%;
+	padding-left: 12px;
 	margin-bottom: 10px;
 }
 .login button:hover{
