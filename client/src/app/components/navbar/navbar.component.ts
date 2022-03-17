@@ -21,10 +21,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  openDialog(){
+ public openDialog(){
     this.dialog.open(SigninComponent, { panelClass: 'custom-dialog-container' })
   }
-  open(){
+ public open(){
     this.dialog.open(SignupComponent, { panelClass: 'custom-dialog-container' })
   }
 
