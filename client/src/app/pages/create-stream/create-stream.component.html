@@ -17,27 +17,41 @@
             <i [routerLink]="['/']" class="fa fa-times fa-2x" aria-hidden="true"
                 style="cursor: pointer;margin-top: -30px;"></i>
         </div>
+        <div style="margin-top: 2%">
+            <mat-form-field appearance="fill" >
+                <mat-label style="color: white;"> Danh mục</mat-label>
+                <mat-select style="color: aqua;" [formControl]="animalControl" required  >
+                  <mat-option>--</mat-option>
+                  <mat-option *ngFor="let category of categories" [value]="category.categoryId">
+                    {{category.name}}
+                  </mat-option>
+                  
+                </mat-select>
+                <mat-error *ngIf="animalControl.hasError('required')">Vui lòng chọn danh mục thể loại</mat-error>
+                <mat-hint>{{animalControl.value?.sound}}</mat-hint>
+              </mat-form-field>
+        </div>
         <form [formGroup]="createStreamForm" (submit)="submitCreateStream()">
-            <div class="detail" style="margin-top: 5%;">
+            <div class="detail" style="margin-top: 2%;">
 
                 <div id="tittle">
                     <mat-form-field appearance="outline">
                         <mat-label>Tiêu đề (bắt buộc)</mat-label>
-                        <input style="background-color:rgb(70, 67, 67);color: azure; " required matInput
+                        <input style="background-color:rgb(70, 67, 67);color: white; " required matInput
                             placeholder="Thêm tiêu đề miêu tả sự kiện trực tiếp" formControlName="Name">
                     </mat-form-field>
                 </div>
                 <div id="detail" style="margin-top: 3%;">
                     <mat-form-field appearance="outline">
                         <mat-label>Mô tả</mat-label>
-                        <input style="background-color:rgb(70, 67, 67);color: azure;width: 100%;" matInput
+                        <input style="background-color:rgb(70, 67, 67);color: black;width: 100%;" matInput
                             placeholder="Giới thiệu thêm cho người xem về sự kiện trực tiếp" style="padding-bottom:50px"
                             formControlName="Description">
                     </mat-form-field>
                 </div>
                 <div style="display: flex;margin-top: 3%;">
                     <mat-form-field appearance="outline" style="width: 90%;">
-                        <input matInput [type]="hide ? 'password' : 'text'" style="font-size: 20px;"
+                        <input readonly="true" matInput [type]="hide ? 'password' : 'text'" style="font-size: 20px;"
                             formControlName="StreamKey">
                         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                             [attr.aria-pressed]="hide">
