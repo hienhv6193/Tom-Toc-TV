@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  user:any
+ 
   constructor(public dialog : MatDialog,public auth:AuthService){
    
 

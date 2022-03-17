@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { FontEditProfileComponent } from 'src/app/components/font-edit-profile/font-edit-profile.component';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-infor-profile',
@@ -9,7 +10,7 @@ import { FontEditProfileComponent } from 'src/app/components/font-edit-profile/f
 })
 export class InforProfileComponent implements OnInit {
 
-  constructor(public dialog:MatDialog) { }
+  constructor(public dialog:MatDialog,public auth:AuthService) { }
 
   ngOnInit(): void {
   }

@@ -14,23 +14,23 @@
 	<div class="navbar">
 
 	<div class="text" >
-		<a [routerLink]="['/home']">Home</a>
-		<a [routerLink]="['/gamegenre']">Live</a>
-		<a routerLink="/Category">Category	</a>
+		<a [routerLink]="['']">Trang Chủ</a>
+		<a [routerLink]="['/gamegenre']">Trực Tiếp</a>
+		<a routerLink="/Category" >Thể Loại	</a>
 		</div>
 		
-		<div class="search-form">
+		<!-- <div class="search-form">
 			<input matInput type="search" placeholder="Tìm kiếm...">
 			<label class='fa fa-search'></label>
-		</div>
+		</div> -->
 		
 	</div>
 	
 	<!--icon chưa đăng nhập -->
 	<div class="login">
-		<button mat-button  (click)="open()" *ngIf="!this.auth.user" >Sign up</button>
+		<button mat-button  (click)="open()" *ngIf="!this.auth.user" >Đăng Ký </button>
 		<div class="divine"></div>
-		<button mat-button (click)="openDialog()"*ngIf="!this.auth.user" >Sign in</button>
+		<button mat-button (click)="openDialog()"*ngIf="!this.auth.user" >Đăng nhập</button>
 		<div class="circle" *ngIf="this.auth.user" [routerLink]="['/infor-profile']">
 			<img  [src]="this.auth.user.photoURL" >
 		</div>
@@ -38,7 +38,7 @@
 			<mat-icon style="margin: 50% 5px 0 20px;color: white;">keyboard_arrow_down</mat-icon>
 			<div class="w3-dropdown-content w3-bar-block w3-border" >
 			  <a  class="w3-bar-item w3-button" style="display: flex;"><mat-icon>settings</mat-icon>Setting</a>
-			  <a (click)="this.auth.logout()" class="w3-bar-item w3-button" style="display: flex;"><mat-icon>forward</mat-icon>Signout</a>
+			  <a [routerLink]="['']" (click)="this.auth.logout()" class="w3-bar-item w3-button" style="display: flex;"><mat-icon>forward</mat-icon>Signout</a>
 			  
 			</div>
 		  </div>
