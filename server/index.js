@@ -1,15 +1,13 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const body = require('body-parser');
-const cors = require('cors');
+const body = require("body-parser");
+const cors = require("cors");
 
 app.use(body.urlencoded({ extended: false }));
-const Database = require('./database');
+const Database = require("./database");
 const db = new Database();
 app.use(body.json());
 app.use(cors());
-
-
 
 //API chỉnh sửa thông tin người dùng theo UserID
 // app.get("/editUserInfo", async function (request, response) {
@@ -84,9 +82,8 @@ app.use(cors());
 app.post("/createStream", async (req, res) => {
   try {
     let body = req.body;
-    let result=await db.createStream(body.data);
+    let result = await db.createStream(body.data).then(res.send);
 
-    res.send(result);
   } catch (error) {
     res.send(error.toString());
   }
@@ -95,7 +92,7 @@ app.post("/createStream", async (req, res) => {
 app.delete("/endStream", async (req, res) => {
   try {
     let body = req.body;
-    await db.endStream(body.data)
+    await db.endStream(body.data);
     res.send("Tắt stream thành công");
   } catch (error) {
     res.send(error.toString());
@@ -105,13 +102,12 @@ app.delete("/endStream", async (req, res) => {
 app.post("/addChat", async (req, res) => {
   try {
     let body = req.body;
-    let result =await db.addChat(body.data);
+    let result = await db.addChat(body.data);
     res.send("Chat thành công");
-  }catch(err){
+  } catch (err) {
     res.send(error.toString());
   }
-
-})
+});
 // API tắt stream. Xóa document , cập nhật biên IsStreaming=false của người dùng có Id trùng với hostID
 // app.delete("/deleteStream", async (req, res) => {
 //   try{
@@ -143,7 +139,7 @@ app.post("/addChat", async (req, res) => {
 //             }else{
 //               res.send({message:"đã theo dõi"});
 //             }
-//            }) 
+//            })
 //        })
 //       });
 
@@ -156,7 +152,7 @@ app.post("/addChat", async (req, res) => {
 //                 await firestore.collection("UserInfo").doc(element.id).update({
 //                   Subcribe: admin.firestore.FieldValue.arrayUnion(body.userIdStream)})
 //             }
-//            })   
+//            })
 //        })
 //       });
 // }catch(error){
@@ -179,7 +175,7 @@ app.post("/addChat", async (req, res) => {
 //               }else{
 //                   res.send({message:"chưa theo dõi"});
 //               }
-//          })   
+//          })
 //      })
 //     });
 
@@ -192,7 +188,7 @@ app.post("/addChat", async (req, res) => {
 //                 await firestore.collection("UserInfo").doc(element.id).update({
 //                   Subcribe: admin.firestore.FieldValue.arrayRemove(body.userIdStream)})
 //             }
-//            })   
+//            })
 //        })
 //       });
 
@@ -219,7 +215,7 @@ app.post("/addChat", async (req, res) => {
 // else{
 //     res.send({message:"đã like"});
 // }
-//              })   
+//              })
 //          })
 //         });
 // }catch(error){
@@ -245,7 +241,7 @@ app.post("/addChat", async (req, res) => {
 //               // else{
 //               //     res.send({message:"đã dislike"});
 //               // }
-//              })   
+//              })
 //          })
 //         });
 // }catch(error){
@@ -255,7 +251,7 @@ app.post("/addChat", async (req, res) => {
 // API thêm danh mục
 app.post("/addElementCategorie", async (req, res) => {
   try {
-    let body = req.body
+    let body = req.body;
     await firestore.collection("Categories").doc(body.docId).update(body.data);
     res.send({ message: "thêm thành công" });
   } catch (error) {
@@ -265,5 +261,5 @@ app.post("/addElementCategorie", async (req, res) => {
 
 //API thêm thành phần trong danh mục
 app.listen(3000, "0.0.0.0", () => {
-  console.log("Server is running on http://127.0.0.1:3000/")
+  console.log("Server is running on http://127.0.0.1:3000/");
 });
