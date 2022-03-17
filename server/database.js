@@ -67,10 +67,10 @@ class Database {
   ////STREAM FUNCTION
 
   /// Tạo stream
-  async createStream(data) {
+  async createStream(body) {
     let temp;
     try {
-     temp = await firestore.collection("Streams").add(data).then((data)=>{
+     temp = await firestore.collection("Streams").add(body).then((data)=>{
        return data.id;
      });
       let string = temp.id;
@@ -106,8 +106,7 @@ class Database {
   }
   ////END STREAM FUNCTION
 
-  async createSubcribe(data) {
-    let temp;
+  async createSubcribe(body) {
     try {
       await firestore.collection("UserInfo")
       .where('UserId', '==', body.userIdStream).get()
@@ -117,16 +116,98 @@ class Database {
              if(data!=body.userIdSubcriber){
                   await firestore.collection("UserInfo").doc(element.id).update({
                     Subcriber: admin.firestore.FieldValue.arrayUnion(body.userIdSubcriber)})
-                res.send({message:"theo dõi thành công"});
-              }else{
-                res.send({message:"đã theo dõi"});
               }
              }) 
          })
         });
 
+        await firestore.collection("UserInfo")
+        .where('UserId', '==', body.userIdSubcriber).get()
+        .then(value => {
+               value.forEach(element => {
+                 element.data().Subcribe.forEach( async data=>{
+                   if(data!=body.userIdStream){
+                        await firestore.collection("UserInfo").doc(element.id).update({
+                          Subcribe: admin.firestore.FieldValue.arrayUnion(body.userIdStream)})
+                    }
+                   })   
+               })
+              });
 
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
+  async deleteSubcribe(body) {
+    try {
+      await firestore.collection("UserInfo")
+        .where('UserId', '==', body.userIdStream).get()
+        .then(value => {
+           value.forEach(element => {
+             element.data().Subcriber.forEach( async data=>{
+               if(data==body.userIdSubcriber){
+                    await firestore.collection("UserInfo").doc(element.id).update({
+                      Subcriber: admin.firestore.FieldValue.arrayRemove(body.userIdSubcriber)})
+                    }
+               })   
+           })
+          });
+      
+          await firestore.collection("UserInfo")
+          .where('UserId', '==', body.userIdSubcriber).get()
+          .then(value => {
+             value.forEach(element => {
+               element.data().Subcribe.forEach( async data=>{
+                 if(data==body.userIdStream){
+                      await firestore.collection("UserInfo").doc(element.id).update({
+                        Subcribe: admin.firestore.FieldValue.arrayRemove(body.userIdStream)})
+                  }
+                 })   
+             })
+            });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async like(body) {
+    try {
+    await firestore.collection("Streams")
+      .where('HostId', '==', body.HostIdStream).get()
+      .then(value => {
+         value.forEach(element => {
+           element.data().DisLikes.forEach(async data=>{
+             if(data==body.userIdDisLike){
+                  await firestore.collection("Streams").doc(element.id).update({
+                    DisLikes: admin.firestore.FieldValue.arrayRemove(body.userIdDisLike)})
+                  await firestore.collection("Streams").doc(element.id).update({
+                    Likes: admin.firestore.FieldValue.arrayUnion(body.userIdDisLike)})
+                  }
+             })   
+         })
+        });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async disLike(body) {
+    try {
+      await firestore.collection("Streams")
+      .where('HostId', '==', body.HostIdStream).get()
+      .then(value => {
+         value.forEach(element => {
+           element.data().Likes.forEach(async data=>{
+             if(data==body.userIdLike){
+                  await firestore.collection("Streams").doc(element.id).update({
+                    Likes: admin.firestore.FieldValue.arrayRemove(body.userIdLike)})
+                  await firestore.collection("Streams").doc(element.id).update({
+                    DisLikes: admin.firestore.FieldValue.arrayUnion(body.userIdLike)})
+                  }
+             })   
+         })
+        });
     } catch (err) {
       console.log(err);
     }

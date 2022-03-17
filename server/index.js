@@ -34,15 +34,15 @@ app.get("/getUserInfo", async function (req, res) {
 
 
 // API tạo người dùng. Không tạo mới nếu người dùng tồn tại trong hệ thống
-app.post("/createUser", async (req, res) => {
-  try {
-    let body = req.body;
-    await db.editUserInfo(body);
-    res.send("cập nhật thông tin thành công");
-  } catch (error) {
-    res.send(error.toString());
-  }
-});
+// app.post("/createUser", async (req, res) => {
+//   try {
+//     let body = req.body;
+//     await db.editUserInfo(body);
+//     res.send("cập nhật thông tin thành công");
+//   } catch (error) {
+//     res.send(error.toString());
+//   }
+// });
 
 // API lấy ra danh sách streamer mà người dùng theo dõi
 // app.get("/getStreamer", async function (req, res) {
@@ -105,118 +105,50 @@ app.post("/addChat", async (req, res) => {
 // });
 
 // API Subcribe.
-app.put("/createSubcribe", async (req, res) => {
+app.post("/createSubcribe", async (req, res) => {
     try {
       let body = req.body;
-      await db.editUserInfo(body);
-      res.send("cập nhật thông tin thành công");
+      await db.createSubcribe(body);
+      res.send("theo dõi thành công");
     } catch (error) {
       res.send(error.toString());
     }
   });
 
-  // await firestore.collection("UserInfo")
-    // .where('UserId', '==', body.userIdSubcriber).get()
-    // .then(value => {
-    //    value.forEach(element => {
-    //      element.data().Subcribe.forEach( async data=>{
-    //        if(data!=body.userIdStream){
-    //             await firestore.collection("UserInfo").doc(element.id).update({
-    //               Subcribe: admin.firestore.FieldValue.arrayUnion(body.userIdStream)})
-    //         }
-    //        })   
-    //    })
-    //   });
-
 
 // API UnSubcribe
-// app.delete("/deleteSubcribe", async (req, res) => {
-//   try{
-//   let body = req.body;
-//   await firestore.collection("UserInfo")
-//   .where('UserId', '==', body.userIdStream).get()
-//   .then(value => {
-//      value.forEach(element => {
-//        element.data().Subcriber.forEach( async data=>{
-//          if(data==body.userIdSubcriber){
-//               await firestore.collection("UserInfo").doc(element.id).update({
-//                 Subcriber: admin.firestore.FieldValue.arrayRemove(body.userIdSubcriber)})
-//                 res.send({message:"hủy theo dõi thành công"});
-//               }else{
-//                   res.send({message:"chưa theo dõi"});
-//               }
-//          })   
-//      })
-//     });
-
-//     await firestore.collection("UserInfo")
-//     .where('UserId', '==', body.userIdSubcriber).get()
-//     .then(value => {
-//        value.forEach(element => {
-//          element.data().Subcribe.forEach( async data=>{
-//            if(data==body.userIdStream){
-//                 await firestore.collection("UserInfo").doc(element.id).update({
-//                   Subcribe: admin.firestore.FieldValue.arrayRemove(body.userIdStream)})
-//             }
-//            })   
-//        })
-//       });
-
-// }catch(error){
-//     res.send(error.toString());}
-// });
+app.delete("/deleteSubcribe", async (req, res) => {
+  try {
+    let body = req.body;
+    await db.deleteSubcribe(body);
+    res.send("hủy theo dõi thành công");
+  } catch (error) {
+    res.send(error.toString());
+  }
+});
 
 // API like
-// app.put("/like", async (req, res) => {
-//   try{
-//     let body=req.body
-//     await firestore.collection("Streams")
-//       .where('HostID', '==', body.HostIdStream).get()
-//       .then(value => {
-//          value.forEach(element => {
-//            element.data().DisLikes.forEach(async data=>{
-//              if(data==body.userIdDisLike){
-//                   await firestore.collection("Streams").doc(element.id).update({
-//                     DisLikes: admin.firestore.FieldValue.arrayRemove(body.userIdDisLike)})
-//                   await firestore.collection("Streams").doc(element.id).update({
-//                     Likes: admin.firestore.FieldValue.arrayUnion(body.userIdDisLike)})
-// res.send({message:"like"});
-//                   }
-// else{
-//     res.send({message:"đã like"});
-// }
-//              })   
-//          })
-//         });
-// }catch(error){
-//     res.send(error.toString());}
-// });
+app.put("/like", async (req, res) => {
+  try {
+    let body = req.body;
+    await db.like(body);
+    res.send("like");
+  } catch (error) {
+    res.send(error.toString());
+  }
+});
 
 //API dislike
-// app.put("/dislike", async (req, res) => {
-//   try{
-//     let body=req.body
-//     await firestore.collection("Streams")
-//       .where('HostID', '==', body.HostIdStream).get()
-//       .then(value => {
-//          value.forEach(element => {
-//            element.data().Likes.forEach(async data=>{
-//              if(data==body.userIdDisLike){
-//                   await firestore.collection("Streams").doc(element.id).update({
-//                     Likes: admin.firestore.FieldValue.arrayRemove(body.userIdDisLike)})
-//                   await firestore.collection("Streams").doc(element.id).update({
-//                     DisLikes: admin.firestore.FieldValue.arrayUnion(body.userIdDisLike)})
-//                   // res.send({message:"dislike"});
-//                   }
-//               // else{
-//               //     res.send({message:"đã dislike"});
-//               // }
-//              })   
-//          })
-//         });
-// }catch(error){
-//     res.send(error.toString());}
-// });
+app.put("/dislike", async (req, res) => {
+  try {
+    let body = req.body;
+    await db.disLike(body);
+    res.send("dislike");
+  } catch (error) {
+    res.send(error.toString());
+  }
+});
+
 
 // API thêm danh mục
 // app.post("/addElementCategorie", async (req, res) => {
