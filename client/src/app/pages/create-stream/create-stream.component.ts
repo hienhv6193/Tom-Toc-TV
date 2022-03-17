@@ -8,6 +8,10 @@ import {
   Validators,
 } from '@angular/forms';
 import { StreamService } from 'src/app/services/stream.service';
+export interface Category{
+  categoryId:number;
+  name:string;
+}
 @Component({
   selector: 'app-create-stream',
   templateUrl: './create-stream.component.html',
@@ -15,6 +19,13 @@ import { StreamService } from 'src/app/services/stream.service';
   styleUrls: ['./create-stream.component.scss'],
 })
 export class CreateStreamComponent implements OnInit {
+  animalControl = new FormControl('', Validators.required);
+  selectFormControl = new FormControl('', Validators.required);
+  categories: Category[] = [
+    {categoryId: 1, name: 'GAME'},
+    {categoryId: 2, name: 'TALKSHOW'},
+    {categoryId: 3, name: 'BÌNH LUẬN GIẢI ĐẤU'},
+  ];
   public createStreamForm: FormGroup;
   hide = true;
   constructor(public fb: FormBuilder, public stream: StreamService,public auth:AuthService) {
@@ -29,7 +40,6 @@ export class CreateStreamComponent implements OnInit {
   ngOnInit(): void {}
   genKey() {
     this.createStreamForm.controls['StreamKey'].patchValue(uuidv4());
-
   }
   submitCreateStream() {
     let form = this.createStreamForm;

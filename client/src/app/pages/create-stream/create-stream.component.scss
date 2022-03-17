@@ -35,6 +35,7 @@ span.icon{
  #customBtn:hover {
     cursor: pointer;
 }
+
 .center{
    
     width: 100%;
@@ -49,7 +50,7 @@ span.icon{
     background-color: rgb(70, 67, 67);
     color: white;
     width: 50%;
-    height: 75%;;
+    height: 85%;;
     padding: 40px;
 }
 .detail{
@@ -86,6 +87,7 @@ span.icon{
       padding-bottom: 6px;
     } 
 
+    
     ::ng-deep {
         .mat-form-field-appearance-outline .mat-form-field-outline {
            color: white;
@@ -94,6 +96,9 @@ span.icon{
           ::placeholder, .mat-form-field-label {
                color: whitesmoke;
             }
+         }
+         .mat-select span {
+             color: white;
          }
     }
     @media only screen and (max-width: 500px){

@@ -63,6 +63,9 @@
 .link-content  li:hover{
     color: rgba(64, 64, 238, 0.856);
 }
+.regis button{
+    margin: 20px;
+}
 .regis button:hover{
     background-color: rgb(129, 5, 5);
     color: yellow   ;
@@ -81,7 +84,7 @@
 
     }
     .container i{
-        margin-left: 50px;
+        margin-left: 30%;
         position: relative;
         font-size: 35px;
         margin-bottom: 15px;
@@ -95,12 +98,15 @@
     }
     .about-content h2{
         font-size: 14px;
-        margin-left: 50px;
+        margin-left: 20%;
     }
     .vl{
         display: none;
     }
-
+    .regis button{
+        margin:28px;
+        height: 30px ;
+    }
 }
 
 
