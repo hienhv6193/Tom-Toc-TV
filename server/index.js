@@ -9,62 +9,40 @@ const db = new Database();
 app.use(body.json());
 app.use(cors());
 
-
-
 //API chỉnh sửa thông tin người dùng theo UserID
-// app.get("/editUserInfo", async function (request, response) {
-// let body=request.body
-//   let userId = body.userID;
-//   try{
-//   let querySnapshot = firestore.collectio("UserInfo")
-//   // .where('UserId', '==', 'PhEOYWGGS7rhWWsRaB61').get()
-//   .where('UserId', '==', userId).get()
-//   .then(res => {
-//     console.log(res);
-//     res.forEach(element => {
-//       // console.log(element.data());
-//        element.ref.update(body.data);
-//     });
-//   });
-//   response.send(querySnapshot);
-// }catch(err)
-// {
-//       res.send(err.toString());
-// }
-// let result=await db.addItem();
-// res.send(result)
+app.post("/editUserInfo", async function (req, res) {
+  try {
+    let body = req.body;
+    await db.editUserInfo(body);
+    res.send("cập nhật thông tin thành công");
+  } catch (error) {
+    res.send(error.toString());
+  }
+});
 
-// });
+// Lấy dữ liệu người dùng vào TrangProfile thông qua firebase authentication
+// và API get UserInfo
+app.get("/getUserInfo", async function (req, res) {
+  try {
+    let body = req.body;
+    let result=await db.getUserInfo(body);
+    res.send(result);
+  } catch (error) {
+    res.send(error.toString());
+  }
+});
+
 
 // API tạo người dùng. Không tạo mới nếu người dùng tồn tại trong hệ thống
-// app.post("/createUser", async (req, res) => {
-//   let body = req.body;
-//   let checkUser=false;
-//   try{
-//   let findUser = await firestore.collection("Users").get()
-//   findUser.forEach(doc => {
-//     // console.log(doc.data())
-//     if(doc.id == body.docUser ){
-//       return checkUser=true;
-//     }
-//   });
-//   // console.log(checkUser)
-//   if(!checkUser){
-//   let result = await firestore.collection("Users").add(body.data);
-//   let temp= result.data();
-//   res.send({
-//     message: "thêm người dùng mới",
-//     temp
-//   });
-//   }else{
-//     res.send({
-//       message: "người dùng đã tồn tại",
-//     });
-//   }
-// }catch(err){
-//     res.send(err.toString());
-// }
-// });
+app.post("/createUser", async (req, res) => {
+  try {
+    let body = req.body;
+    await db.editUserInfo(body);
+    res.send("cập nhật thông tin thành công");
+  } catch (error) {
+    res.send(error.toString());
+  }
+});
 
 // API lấy ra danh sách streamer mà người dùng theo dõi
 // app.get("/getStreamer", async function (req, res) {
@@ -85,7 +63,6 @@ app.post("/createStream", async (req, res) => {
   try {
     let body = req.body;
     let result=await db.createStream(body.data);
-
     res.send(result);
   } catch (error) {
     res.send(error.toString());
@@ -110,8 +87,8 @@ app.post("/addChat", async (req, res) => {
   }catch(err){
     res.send(error.toString());
   }
-
 })
+
 // API tắt stream. Xóa document , cập nhật biên IsStreaming=false của người dùng có Id trùng với hostID
 // app.delete("/deleteStream", async (req, res) => {
 //   try{
@@ -128,40 +105,29 @@ app.post("/addChat", async (req, res) => {
 // });
 
 // API Subcribe.
-// app.put("/createSubcribe", async (req, res) => {
-//   try{
-//     let body = req.body;
-//     await firestore.collection("UserInfo")
-//     .where('UserId', '==', body.userIdStream).get()
-//     .then(value => {
-//        value.forEach(element => {
-//          element.data().Subcriber.forEach( async data=>{
-//            if(data!=body.userIdSubcriber){
-//                 await firestore.collection("UserInfo").doc(element.id).update({
-//                   Subcriber: admin.firestore.FieldValue.arrayUnion(body.userIdSubcriber)})
-//               res.send({message:"theo dõi thành công"});
-//             }else{
-//               res.send({message:"đã theo dõi"});
-//             }
-//            }) 
-//        })
-//       });
+app.put("/createSubcribe", async (req, res) => {
+    try {
+      let body = req.body;
+      await db.editUserInfo(body);
+      res.send("cập nhật thông tin thành công");
+    } catch (error) {
+      res.send(error.toString());
+    }
+  });
 
-//     await firestore.collection("UserInfo")
-//     .where('UserId', '==', body.userIdSubcriber).get()
-//     .then(value => {
-//        value.forEach(element => {
-//          element.data().Subcribe.forEach( async data=>{
-//            if(data!=body.userIdStream){
-//                 await firestore.collection("UserInfo").doc(element.id).update({
-//                   Subcribe: admin.firestore.FieldValue.arrayUnion(body.userIdStream)})
-//             }
-//            })   
-//        })
-//       });
-// }catch(error){
-//     res.send(error.toString());}
-// });
+  // await firestore.collection("UserInfo")
+    // .where('UserId', '==', body.userIdSubcriber).get()
+    // .then(value => {
+    //    value.forEach(element => {
+    //      element.data().Subcribe.forEach( async data=>{
+    //        if(data!=body.userIdStream){
+    //             await firestore.collection("UserInfo").doc(element.id).update({
+    //               Subcribe: admin.firestore.FieldValue.arrayUnion(body.userIdStream)})
+    //         }
+    //        })   
+    //    })
+    //   });
+
 
 // API UnSubcribe
 // app.delete("/deleteSubcribe", async (req, res) => {
@@ -253,15 +219,15 @@ app.post("/addChat", async (req, res) => {
 // });
 
 // API thêm danh mục
-app.post("/addElementCategorie", async (req, res) => {
-  try {
-    let body = req.body
-    await firestore.collection("Categories").doc(body.docId).update(body.data);
-    res.send({ message: "thêm thành công" });
-  } catch (error) {
-    res.send(error.toString());
-  }
-});
+// app.post("/addElementCategorie", async (req, res) => {
+//   try {
+//     let body = req.body
+//     await firestore.collection("Categories").doc(body.docId).update(body.data);
+//     res.send({ message: "thêm thành công" });
+//   } catch (error) {
+//     res.send(error.toString());
+//   }
+// });
 
 //API thêm thành phần trong danh mục
 app.listen(3000, "0.0.0.0", () => {

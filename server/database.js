@@ -1,6 +1,6 @@
 
 var admin = require("firebase-admin");
-var serviceAccount = require("./Keys/key.json");
+var serviceAccount = require("./keys/key.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
@@ -10,6 +10,60 @@ class Database {
   constructor() {
 
   }
+
+  async editUserInfo(body) {
+    let temp;
+    try {
+      await firestore.collection("UserInfo")
+      .where('UserId', '==', body.userId).get().then(res => {
+        res.forEach(element => {
+           return temp=element.id ;
+        });
+      });
+      await firestore.collection("UserInfo").doc(temp).update(body.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async getUserInfo(body) {
+    let temp;
+    try {
+      await firestore.collection("UserInfo")
+      .where('UserId', '==', body.userId).get().then(res => {
+        res.forEach(element => {
+           return temp=element.data() ;
+        });
+      });
+      return temp
+      // await firestore.collection("UserInfo").doc(temp).update(body.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async createUser(body) {
+    let temp;
+    try {
+      
+      let checkUser=false;
+      let findUser = await firestore.collection("Users").get()
+      findUser.forEach(doc => {
+        // console.log(doc.data())
+        if(doc.id == body.docUser ){
+          return checkUser=true;
+        }
+      });
+      // console.log(checkUser)
+      if(!checkUser){
+      let result = await firestore.collection("Users").add(body.data);
+      // let temp= result.data();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   ////STREAM FUNCTION
 
   /// Tạo stream
@@ -19,17 +73,14 @@ class Database {
      temp = await firestore.collection("Streams").add(data).then((data)=>{
        return data.id;
      });
-  
       let string = temp.id;
       let checkUser = await firestore.collection("Streams").doc(string).get();
       let StreamID = checkUser.data().HostId;
       await firestore.collection("Users").doc(StreamID).update({ "isStreaming": true });
       return temp;
-     
     } catch (err) {
-
+      console.log(err);
     }
-   
   }
   //Xóa stream
   async endStream(bodydata) {
@@ -54,5 +105,32 @@ class Database {
     }
   }
   ////END STREAM FUNCTION
+
+  async createSubcribe(data) {
+    let temp;
+    try {
+      await firestore.collection("UserInfo")
+      .where('UserId', '==', body.userIdStream).get()
+      .then(value => {
+         value.forEach(element => {
+           element.data().Subcriber.forEach( async data=>{
+             if(data!=body.userIdSubcriber){
+                  await firestore.collection("UserInfo").doc(element.id).update({
+                    Subcriber: admin.firestore.FieldValue.arrayUnion(body.userIdSubcriber)})
+                res.send({message:"theo dõi thành công"});
+              }else{
+                res.send({message:"đã theo dõi"});
+              }
+             }) 
+         })
+        });
+
+
+
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
 }
 module.exports = Database;
