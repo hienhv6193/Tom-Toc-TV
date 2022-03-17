@@ -1,5 +1,5 @@
 var admin = require("firebase-admin");
-var serviceAccount = require("./Keys/key.json");
+var serviceAccount = require("./keys/key.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
@@ -7,20 +7,96 @@ admin.initializeApp({
 const firestore = admin.firestore();
 class Database {
   constructor() {}
+
+  async editUserInfo(body) {
+    let temp;
+    try {
+      await firestore
+        .collection("UserInfo")
+        .where("UserId", "==", body.userId)
+        .get()
+        .then((res) => {
+          res.forEach((element) => {
+            return (temp = element.id);
+          });
+        });
+      await firestore.collection("UserInfo").doc(temp).update(body.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  async addNewUser(data) {
+    try {
+      let temp = await firestore.collection("Users").doc(data.Id).get();
+      if (temp.exists) {
+        return;
+      } else {
+        await firestore
+          .collection("Users")
+          .doc(data.Id)
+          .set({ Name: data.Name, isStreaming: false });
+        await firestore.collection("UserInfo").add({
+          UserId: data.Id,
+          Name: data.Name,
+          Subcribe: [],
+          Subcriber: [],
+        });
+      }
+    } catch (err) {}
+  }
+
+  async getUserInfo(body) {
+    let temp;
+    try {
+      await firestore
+        .collection("UserInfo")
+        .where("UserId", "==", body.userId)
+        .get()
+        .then((res) => {
+          res.forEach((element) => {
+            return (temp = element.data());
+          });
+        });
+      return temp;
+      // await firestore.collection("UserInfo").doc(temp).update(body.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async createUser(body) {
+    let temp;
+    try {
+      let checkUser = false;
+      let findUser = await firestore.collection("Users").get();
+      findUser.forEach((doc) => {
+        // console.log(doc.data())
+        if (doc.id == body.docUser) {
+          return (checkUser = true);
+        }
+      });
+      // console.log(checkUser)
+      if (!checkUser) {
+        let result = await firestore.collection("Users").add(body.data);
+        // let temp= result.data();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   ////STREAM FUNCTION
 
   /// Tạo stream
   async createStream(data) {
-    return new Promise(async(resolve, reject)  => {
-      let temp = await(await firestore.collection("Streams").add(data)).get();
-      // let string = temp.id;
+    return new Promise(async (resolve, reject) => {
+      let temp = await (await firestore.collection("Streams").add(data)).get();
       let checkUser = temp.data();
       let StreamID = checkUser.HostId;
-      // console.log(StreamID)
-      // await firestore
-      //   .collection("Users")
-      //   .doc(StreamID)
-      //   .update({ isStreaming: true });
+      await firestore
+        .collection("Users")
+        .doc(StreamID)
+        .update({ isStreaming: true });
       resolve(temp.id);
     });
   }
@@ -59,5 +135,36 @@ class Database {
     }
   }
   ////END STREAM FUNCTION
+
+  async createSubcribe(data) {
+    let temp;
+    try {
+      await firestore
+        .collection("UserInfo")
+        .where("UserId", "==", body.userIdStream)
+        .get()
+        .then((value) => {
+          value.forEach((element) => {
+            element.data().Subcriber.forEach(async (data) => {
+              if (data != body.userIdSubcriber) {
+                await firestore
+                  .collection("UserInfo")
+                  .doc(element.id)
+                  .update({
+                    Subcriber: admin.firestore.FieldValue.arrayUnion(
+                      body.userIdSubcriber
+                    ),
+                  });
+                res.send({ message: "theo dõi thành công" });
+              } else {
+                res.send({ message: "đã theo dõi" });
+              }
+            });
+          });
+        });
+    } catch (err) {
+      console.log(err);
+    }
+  }
 }
 module.exports = Database;
