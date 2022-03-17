@@ -99,18 +99,18 @@ p{
 }
 #gift{
     width: 100%;
-    height: auto;
+    height: 15%;
     background-color: #4A4444;
     text-align: center;
 }
 #donate{
-    font-size: 20px;
+    font-size: 200%;
     margin-top: 2%;
     margin-bottom: 2%;
-    margin-left: 5%;
+    margin-left: 2%;
     background-color: #4A4444;
     color: #FFFFFF;
-    border: 5px;
+    border: solid 3px;
 }
 #donate:hover{
     background-color: #2AABEE;
@@ -153,13 +153,13 @@ p{
 #bl{
     width: 70%;
     height: auto;
-    margin-left: 3%;
+    margin-left: 1%;
 }
 #av{
     width: 10%;
     height: 100%;
-    margin-top: 3%;
-    margin-left: 5%;
+    margin-top: 2%;
+    margin-left: 2%;
 }
 #icon{
     width: 14%;
@@ -175,7 +175,7 @@ p{
     width: auto;
     height: auto;
     margin-top: 5%;
-    margin-left: 3%;
+    margin-left: 2%;
     display: flex;
     flex-wrap: wrap;
     grid-gap: 5rem;
@@ -217,7 +217,7 @@ h2{
     height: 100%;
     border: solid 3px;
     border-radius: 10px;
-    margin-top: 3.5%;
+    margin-top: 4%;
 }
 mat-icon{
   transition: 500ms;

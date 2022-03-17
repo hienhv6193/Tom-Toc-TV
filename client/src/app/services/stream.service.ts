@@ -45,11 +45,9 @@ export class StreamService {
             StreamKey: StreamKey,
             HostId: UserId,
           },
-        })
-        .subscribe(async (data) => {
-          alert(await data);
-          // let idroom=await data;
-          // this.router.navigate([`stream/${idroom}`])
+        },{responseType:'text'})
+        .subscribe((data) => {
+          this.router.navigate([`stream/${data}`])
         });
     }
   }

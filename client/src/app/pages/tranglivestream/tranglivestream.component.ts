@@ -45,6 +45,12 @@ export class TranglivestreamComponent implements OnInit {
       await  this.stream.addChat(this.stream.streamInfo.idDoc,this.chatForm.controls['mess'].value);
       this.chatForm.controls['mess'].reset()
     }
- 
   }
+  async EnterChatMessage(){
+    if(this.chatForm.valid){
+      await  this.stream.addChat(this.stream.streamInfo.idDoc,this.chatForm.controls['mess'].value);
+      this.chatForm.controls['mess'].reset()
+    }
+  }
+
 }
