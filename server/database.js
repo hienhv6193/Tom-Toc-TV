@@ -12,6 +12,26 @@ class Database {
   }
   ////STREAM FUNCTION
 
+  // api lấy  thông tin cá nhân của người dùng
+  async getItemid(){
+    let temp;
+    (await firestore.collection("UserInfo")
+    .get())
+    .docs.map((data)=>{
+      temp = data.data();
+    })
+    return temp;
+  }
+  //// category
+  async getCategory(){
+    let temp=[];
+    (await firestore.collection("Categories").get()
+    ).docs.map((data) => {
+      temp.push(data.data().categoryName);
+    })
+    console.log(temp)
+    return temp;
+  }
   /// Tạo stream
   async createStream(data) {
     let temp;
@@ -29,28 +49,6 @@ class Database {
     } catch (err) {
 
     }
-<<<<<<< HEAD
-    async addItem(){
-        return 'add thành công'
-    }
-    async getItem(){
-        let temp=[];
-        (await firestore.collection("Users").get()).docs.map((data)=>{
-          temp.push(data.data())
-        })
-        return temp
-    }
-    // api lấy  thông tin cá nhân của người dùng
-    async getItemid(){
-      let temp;
-      (await firestore.collection("UserInfo")
-      .get())
-      .docs.map((data)=>{
-        temp = data.data();
-      })
-      return temp;
-    }
-=======
    
   }
   //Xóa stream
@@ -76,6 +74,5 @@ class Database {
     }
   }
   ////END STREAM FUNCTION
->>>>>>> 1caa1cf69d65199086e85d90a56f32773c0e7aa0
 }
 module.exports = Database;
